@@ -8,6 +8,8 @@ import CounselorDetailPage from "./pages/CounselorDetail/inde";
 import RegisterPage from "./pages/Register";
 import FqsPage from "./pages/Fqs";
 
+import ContactPage from "./pages/Contact";
+
 const AppRoutes = () => {
   return (
     <>
@@ -19,6 +21,8 @@ const AppRoutes = () => {
         <Route path="/fqs" element={<FqsPage />} />
         <Route path="/counselor-detail/:id" element={<CounselorDetailPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/signup" element={<RegisterPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
     </>
