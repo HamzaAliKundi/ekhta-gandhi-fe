@@ -33,7 +33,7 @@ const Navbar = () => {
             Find Counselor
           </Link>
           <Link 
-            to="/become-counselor" 
+            to="/signup" 
             className={`text-white hover:text-gray-200 transition-colors font-poppins font-bold text-base leading-none ${isActive('/become-counselor') ? 'font-bold' : 'font-bold'}`}
             onClick={handleLinkClick}
           >
@@ -45,20 +45,20 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-[12px]">
           {/* Login button */}
           <Link 
-            to="/login" 
-            className="w-[120px] h-[40px] px-[20px] py-2 flex items-center justify-center gap-[12px] rounded-[25px] border border-white bg-transparent text-white hover:bg-white hover:text-[#5B7C99] transition-all"
+            to="/signup" 
+            className="w-[140px] h-[42px] px-[20px] py-2 flex items-center justify-center gap-[12px] rounded-[25px] border border-white bg-transparent text-white hover:bg-white hover:text-[#5B7C99] transition-all"
           >
-            <span className="text-base font-medium">Login</span>
+            <span className="text-base font-medium">Sign up</span>
             <img src="/public/common/logout.svg" alt="Logout icon" className="w-4 h-4" />
           </Link>
           
           {/* Sign up button */}
-          <Link 
+          {/* <Link 
             to="/signup" 
             className="w-[120px] h-[42px] px-[20px] py-2 flex items-center justify-center gap-[12px] rounded-[25px] bg-white text-black hover:bg-gray-100 transition-all"
           >
             <span className="text-base font-medium">Sign up</span>
-          </Link>
+          </Link> */}
         </div>
 
         {/* Hamburger menu button (mobile only) */}
@@ -80,14 +80,14 @@ const Navbar = () => {
       <div className={`md:hidden absolute top-[90px] left-0 w-full bg-[#5B7C99] shadow-lg z-50 transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 max-h-[500px]' : 'opacity-0 max-h-0 overflow-hidden'}`}>
         <div className="flex flex-col items-center py-5 space-y-5 px-4">
           <Link to="/counselor" className="text-white hover:text-gray-200 transition-colors font-poppins font-bold text-base leading-none" onClick={handleLinkClick}>Find Counselor</Link>
-          <Link to="/become-counselor" className="text-white hover:text-gray-200 transition-colors font-poppins font-bold text-base leading-none" onClick={handleLinkClick}>Become Counselor</Link>
-          <Link to="/login" className="w-full max-w-[260px] h-[40px] px-[20px] py-2 flex items-center justify-center gap-[12px] rounded-[25px] border border-white bg-transparent text-white hover:bg-white hover:text-[#5B7C99] transition-all" onClick={handleLinkClick}>
-            <span className="text-base font-medium">Login</span>
+          <Link to="/signup" className="text-white hover:text-gray-200 transition-colors font-poppins font-bold text-base leading-none" onClick={handleLinkClick}>Become Counselor</Link>
+          <Link to="/signup" className="w-full max-w-[260px] h-[40px] px-[20px] py-2 flex items-center justify-center gap-[12px] rounded-[25px] border border-white bg-transparent text-white hover:bg-white hover:text-[#5B7C99] transition-all" onClick={handleLinkClick}>
+            <span className="text-base font-medium">Sign up</span>
             <img src="/public/common/logout.svg" alt="Logout icon" className="w-4 h-4" />
           </Link>
-          <Link to="/signup" className="w-full max-w-[260px] h-[42px] px-[20px] py-2 flex items-center justify-center gap-[12px] rounded-[25px] bg-white text-black hover:bg-gray-100 transition-all" onClick={handleLinkClick}>
+          {/* <Link to="/signup" className="w-full max-w-[260px] h-[42px] px-[20px] py-2 flex items-center justify-center gap-[12px] rounded-[25px] bg-white text-black hover:bg-gray-100 transition-all" onClick={handleLinkClick}>
             <span className="text-base font-medium">Sign up</span>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </nav>
