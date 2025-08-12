@@ -68,17 +68,17 @@ const HomePageHeader = () => {
                     {/* Left Section - Text and Search */}
                     <div className="w-full lg:w-[614px] flex flex-col gap-4 sm:gap-6 lg:gap-6 order-2 lg:order-1">
                         {/* Main Text */}
-                        <div className="flex flex-col gap-2 lg:gap-6 text-center lg:text-left">
-                            <h1 className="font-inter-tight font-normal text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[68px] leading-[100%] text-black uppercase tracking-none">
-                                Smart College<br />
-                                Counselling<br />
-                                Powered by Real<br />
+                        <div className="flex flex-col gap-2 lg:gap-6 text-center lg:text-left px-4 sm:px-0">
+                            <h1 className="font-inter-tight font-normal text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[68px] leading-tight lg:leading-[100%] text-black uppercase tracking-none max-w-full lg:max-w-none">
+                                Smart College<span className="hidden lg:inline"><br /></span>
+                                Counselling<span className="hidden lg:inline"><br /></span>
+                                Powered by Real<span className="hidden lg:inline"><br /></span>
                                 Experience
                             </h1>
                         </div>
 
                         {/* Search Bar */}
-                        <div className="flex items-center gap-3 relative mx-auto lg:mx-0 w-[285px] h-[48px] rounded-[29px] pl-6 pr-2 py-1 border border-[#5B7C99] bg-white">
+                        <div className="flex items-center gap-3 relative mx-auto lg:mx-0 w-full max-w-[285px] lg:w-[285px] h-[48px] rounded-[29px] pl-6 pr-2 py-1 border border-[#5B7C99] bg-white">
                             {/* Left Icon - Menu/Hamburger */}
                             <div className="flex flex-col justify-center gap-1 w-5 h-5">
                                 <div className="w-5 h-0.5 bg-[#5B7C99] rounded"></div>
