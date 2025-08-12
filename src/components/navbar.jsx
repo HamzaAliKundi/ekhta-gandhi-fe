@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center justify-center gap-[20px] w-[350px] h-[40px]">
           <Link 
             to="/counselor" 
-            className={`text-white hover:text-gray-200 transition-colors font-poppins font-bold text-base leading-none ${isActive('/find-counselor') ? 'font-bold' : 'font-bold'}`}
+            className={`text-white hover:text-gray-200 transition-colors font-poppins font-bold text-base leading-none ${isActive('/counselor') ? 'font-bold' : 'font-bold'}`}
             onClick={handleLinkClick}
           >
             Find Counselor
@@ -79,7 +79,7 @@ const Navbar = () => {
       {/* Mobile menu dropdown */}
       <div className={`md:hidden absolute top-[90px] left-0 w-full bg-[#5B7C99] shadow-lg z-50 transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 max-h-[500px]' : 'opacity-0 max-h-0 overflow-hidden'}`}>
         <div className="flex flex-col items-center py-5 space-y-5 px-4">
-          <Link to="/find-counselor" className="text-white hover:text-gray-200 transition-colors font-poppins font-bold text-base leading-none" onClick={handleLinkClick}>Find Counselor</Link>
+          <Link to="/counselor" className="text-white hover:text-gray-200 transition-colors font-poppins font-bold text-base leading-none" onClick={handleLinkClick}>Find Counselor</Link>
           <Link to="/become-counselor" className="text-white hover:text-gray-200 transition-colors font-poppins font-bold text-base leading-none" onClick={handleLinkClick}>Become Counselor</Link>
           <Link to="/login" className="w-full max-w-[260px] h-[40px] px-[20px] py-2 flex items-center justify-center gap-[12px] rounded-[25px] border border-white bg-transparent text-white hover:bg-white hover:text-[#5B7C99] transition-all" onClick={handleLinkClick}>
             <span className="text-base font-medium">Login</span>
