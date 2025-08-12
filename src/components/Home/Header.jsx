@@ -78,7 +78,7 @@ const HomePageHeader = () => {
                         </div>
 
                         {/* Search Bar */}
-                        <div className="flex items-center gap-3 relative mx-auto lg:mx-0 w-[285px] h-[48px] rounded-[29px] px-6 py-1 border border-[#5B7C99] bg-white">
+                        <div className="flex items-center gap-3 relative mx-auto lg:mx-0 w-[285px] h-[48px] rounded-[29px] pl-6 pr-2 py-1 border border-[#5B7C99] bg-white">
                             {/* Left Icon - Menu/Hamburger */}
                             <div className="flex flex-col justify-center gap-1 w-5 h-5">
                                 <div className="w-5 h-0.5 bg-[#5B7C99] rounded"></div>
