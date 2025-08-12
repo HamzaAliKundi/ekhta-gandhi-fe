@@ -144,38 +144,38 @@ const Counselor = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 lg:gap-6">
                 {/* Profile Image */}
-                <div className="flex-shrink-0 self-start">
+                <div className="flex-shrink-0 self-center sm:self-start">
                   <div className="relative">
                     <img
                       src={counselor.image}
                       alt={counselor.name}
-                      className="w-24 h-24 sm:w-28 sm:h-28 lg:w-[186px] lg:h-[186px] object-cover shadow-sm"
+                      className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-[186px] lg:h-[186px] object-cover shadow-sm rounded-lg"
                     />
                   </div>
                 </div>
 
                 {/* Card Content - Center section */}
-                <div className="flex-1 min-w-0">
+                <div className="flex-1 min-w-0 text-center sm:text-left">
                   {/* Name */}
-                  <h3 className="text-xl sm:text-2xl lg:text-[26px] font-normal text-black font-poppins mb-2 lg:mb-3 leading-tight">
+                  <h3 className="text-lg sm:text-xl lg:text-[26px] font-normal text-black font-poppins mb-2 lg:mb-3 leading-tight">
                     {counselor.name}
                   </h3>
                   
                   {/* Rating Stars */}
-                  <div className="flex items-center gap-1 mb-3 lg:mb-4">
+                  <div className="flex items-center justify-center sm:justify-start gap-1 mb-3 lg:mb-4">
                     {renderStars(counselor.rating)}
                   </div>
 
                   {/* Description */}
-                  <p className="text-sm sm:text-base lg:text-[16px] font-normal text-black font-poppins leading-relaxed lg:leading-tight mb-3 lg:mb-4">
+                  <p className="text-sm sm:text-base lg:text-[16px] font-normal text-black font-poppins leading-relaxed lg:leading-tight mb-4 lg:mb-5">
                     {counselor.description}
                   </p>
 
                   {/* Learn More Link */}
-                  <div className="mb-4 sm:mb-0">
-                    <Link onClick={() => window.scrollTo(0, 0)} to={`/counselor-detail/${counselor.id}`} className="text-sm sm:text-base lg:text-[16px] font-normal text-black font-poppins underline inline-flex items-center gap-2">
+                  <div className="mb-4 sm:mb-0 flex justify-center sm:justify-start">
+                    <Link onClick={() => window.scrollTo(0, 0)} to={`/counselor-detail/${counselor.id}`} className="text-sm sm:text-base lg:text-[16px] font-normal text-black font-poppins underline inline-flex items-center gap-2 hover:text-gray-700 transition-colors">
                       Learn more
-                      <svg className="w-4 h-4 transform rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 transform rotate-45 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17l9.2-9.2M17 17V7H7" />
                       </svg>
                     </Link>
@@ -183,10 +183,10 @@ const Counselor = () => {
                 </div>
 
                 {/* Right Side - Rate and Buttons */}
-                <div className="flex flex-row sm:flex-col justify-between sm:justify-start items-start sm:items-end gap-4 flex-shrink-0">
+                <div className="flex flex-row sm:flex-col justify-between sm:justify-start items-center sm:items-end gap-4 flex-shrink-0">
                   {/* Hourly Rate */}
-                  <div className="sm:mb-8 lg:mb-16">
-                    <p className="text-xl sm:text-2xl lg:text-[26px] font-normal text-black font-poppins leading-tight">
+                  <div className="sm:mb-8 lg:mb-16 text-center sm:text-right">
+                    <p className="text-lg sm:text-xl lg:text-[26px] font-normal text-black font-poppins leading-tight">
                       {counselor.hourlyRate}
                     </p>
                   </div>
@@ -194,18 +194,18 @@ const Counselor = () => {
                   {/* Action Buttons */}
                   <div className="flex flex-row sm:flex-col gap-2 lg:gap-3 w-full sm:w-auto">
                     <button 
-                      className="w-full sm:w-48 lg:w-[193px] h-10 lg:h-[48px] text-white px-3 py-2 lg:py-3 rounded-3xl hover:opacity-90 transition-all flex items-center justify-center gap-2 lg:gap-3 font-poppins text-sm lg:text-[16px] font-normal"
+                      className="w-24 sm:w-32 lg:w-[193px] h-10 lg:h-[48px] text-white px-2 sm:px-3 py-2 lg:py-3 rounded-3xl hover:opacity-90 transition-all flex items-center justify-center gap-1 sm:gap-2 lg:gap-3 font-poppins text-xs sm:text-sm lg:text-[16px] font-normal"
                       style={{ backgroundColor: '#5B7C99' }}
                     >
-                      <MessageCircle size={14} className="lg:w-4 lg:h-4" />
+                      <MessageCircle size={12} className="sm:w-3 sm:h-3 lg:w-4 lg:h-4" />
                       <span className="hidden sm:inline">Drop a Message</span>
                       <span className="sm:hidden">Message</span>
                     </button>
                     <button 
-                      className="w-full sm:w-48 lg:w-[193px] h-10 lg:h-[48px] text-white px-3 py-2 lg:py-3 rounded-3xl hover:opacity-90 transition-all flex items-center justify-center gap-2 lg:gap-3 font-poppins text-sm lg:text-[16px] font-normal"
+                      className="w-24 sm:w-32 lg:w-[193px] h-10 lg:h-[48px] text-white px-2 sm:px-3 py-2 lg:py-3 rounded-3xl hover:opacity-90 transition-all flex items-center justify-center gap-1 sm:gap-2 lg:gap-3 font-poppins text-xs sm:text-sm lg:text-[16px] font-normal"
                       style={{ backgroundColor: '#5B7C99' }}
                     >
-                      <Calendar size={14} className="lg:w-4 lg:h-4" />
+                      <Calendar size={12} className="sm:w-3 sm:h-3 lg:w-4 lg:h-4" />
                       <span className="hidden sm:inline">Book a Session</span>
                       <span className="sm:hidden">Book</span>
                     </button>
@@ -217,23 +217,26 @@ const Counselor = () => {
         </div>
 
         {/* Pagination */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-2 lg:gap-2 mt-8 lg:mt-12">
-          <button className="px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors order-2 sm:order-1">
-            ← Previous
-          </button>
-          
-          <div className="flex items-center gap-1 order-1 sm:order-2">
-            <button className="w-8 h-8 lg:w-10 lg:h-10 bg-blue-600 text-white rounded-lg font-medium text-sm lg:text-base">1</button>
-            <button className="w-8 h-8 lg:w-10 lg:h-10 text-gray-600 hover:text-gray-800 rounded-lg font-medium text-sm lg:text-base">2</button>
-            <button className="w-8 h-8 lg:w-10 lg:h-10 text-gray-600 hover:text-gray-800 rounded-lg font-medium text-sm lg:text-base">3</button>
-            <span className="px-2 text-gray-600">...</span>
-            <button className="w-8 h-8 lg:w-10 lg:h-10 text-gray-600 hover:text-gray-800 rounded-lg font-medium text-sm lg:text-base">6</button>
-            <button className="w-8 h-8 lg:w-10 lg:h-10 text-gray-600 hover:text-gray-800 rounded-lg font-medium text-sm lg:text-base">7</button>
+        <div className="flex flex-col items-center gap-4 mt-8 lg:mt-12">
+          {/* Page Numbers */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            <button className="w-10 h-10 sm:w-12 sm:h-12 text-white rounded-lg font-medium text-sm sm:text-base transition-colors" style={{backgroundColor: '#6C8BA6'}}>1</button>
+            <button className="w-10 h-10 sm:w-12 sm:h-12 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg font-medium text-sm sm:text-base transition-colors">2</button>
+            <button className="w-10 h-10 sm:w-12 sm:h-12 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg font-medium text-sm sm:text-base transition-colors">3</button>
+            <span className="px-2 text-gray-600 text-sm sm:text-base">...</span>
+            <button className="w-10 h-10 sm:w-12 sm:h-12 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg font-medium text-sm sm:text-base transition-colors">6</button>
+            <button className="w-10 h-10 sm:w-12 sm:h-12 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg font-medium text-sm sm:text-base transition-colors">7</button>
           </div>
           
-          <button className="px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors order-3">
-            Next →
-          </button>
+          {/* Navigation Arrows */}
+          <div className="flex items-center gap-6">
+            <button className="text-gray-600 hover:text-gray-800 transition-colors text-lg font-medium">
+              ←
+            </button>
+            <button className="text-gray-600 hover:text-gray-800 transition-colors text-lg font-medium">
+              →
+            </button>
+          </div>
         </div>
       </div>
     </div>
