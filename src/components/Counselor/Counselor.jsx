@@ -1,5 +1,6 @@
 import React from 'react';
 import { Search, MessageCircle, Calendar, Star, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Counselor = () => {
   const counselors = [
@@ -172,12 +173,12 @@ const Counselor = () => {
 
                   {/* Learn More Link */}
                   <div className="mb-4 sm:mb-0">
-                    <a href="#" className="text-sm sm:text-base lg:text-[16px] font-normal text-black font-poppins underline inline-flex items-center gap-2">
+                    <Link onClick={() => window.scrollTo(0, 0)} to={`/counselor-detail/${counselor.id}`} className="text-sm sm:text-base lg:text-[16px] font-normal text-black font-poppins underline inline-flex items-center gap-2">
                       Learn more
                       <svg className="w-4 h-4 transform rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17l9.2-9.2M17 17V7H7" />
                       </svg>
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
