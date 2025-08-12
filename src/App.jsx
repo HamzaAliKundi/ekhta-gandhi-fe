@@ -5,9 +5,9 @@ import HomePage from "./pages/Home";
 import Footer from "./components/footer";
 import CounselorPage from "./pages/Counselor";
 import CounselorDetailPage from "./pages/CounselorDetail/inde";
+import RegisterPage from "./pages/Register";
 
 const AppRoutes = () => {
-
   return (
     <>
       <Navbar />
@@ -16,6 +16,8 @@ const AppRoutes = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/counselor" element={<CounselorPage />} />
         <Route path="/counselor-detail/:id" element={<CounselorDetailPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+
       </Routes>
       <Footer />
     </>
