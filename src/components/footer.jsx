@@ -1,16 +1,17 @@
 import React from 'react';
 import { Facebook, Linkedin, Github } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const navigationLinks = {
         pages: [
-            { name: 'Home', href: '#' },
+            { name: 'Home', href: '/' },
             { name: 'About', href: '#' },
             { name: 'Our Services', href: '#' }
         ],
         resources: [
-            { name: 'Faqs', href: '#' },
-            { name: 'Counselor', href: '#' }
+            { name: 'Faqs', href: '/fqs' },
+            { name: 'Counselor', href: '/counselor' }
         ],
         legal: [
             { name: 'Privacy Policy', href: '#' },
@@ -61,12 +62,21 @@ const Footer = () => {
                             <ul className="space-y-3">
                                 {navigationLinks.pages.map((link, index) => (
                                     <li key={index}>
-                                        <a 
-                                            href={link.href}
-                                            className="text-white/80 hover:text-white transition-colors duration-200 text-base"
-                                        >
-                                            {link.name}
-                                        </a>
+                                        {link.href.startsWith('/') ? (
+                                            <Link
+                                                to={link.href}
+                                                className="text-white/80 hover:text-white transition-colors duration-200 text-base"
+                                            >
+                                                {link.name}
+                                            </Link>
+                                        ) : (
+                                            <a
+                                                href={link.href}
+                                                className="text-white/80 hover:text-white transition-colors duration-200 text-base"
+                                            >
+                                                {link.name}
+                                            </a>
+                                        )}
                                     </li>
                                 ))}
                             </ul>
@@ -80,12 +90,21 @@ const Footer = () => {
                             <ul className="space-y-3">
                                 {navigationLinks.resources.map((link, index) => (
                                     <li key={index}>
-                                        <a 
-                                            href={link.href}
-                                            className="text-white/80 hover:text-white transition-colors duration-200 text-base"
-                                        >
-                                            {link.name}
-                                        </a>
+                                        {link.href.startsWith('/') ? (
+                                            <Link
+                                                to={link.href}
+                                                className="text-white/80 hover:text-white transition-colors duration-200 text-base"
+                                            >
+                                                {link.name}
+                                            </Link>
+                                        ) : (
+                                            <a
+                                                href={link.href}
+                                                className="text-white/80 hover:text-white transition-colors duration-200 text-base"
+                                            >
+                                                {link.name}
+                                            </a>
+                                        )}
                                     </li>
                                 ))}
                             </ul>
@@ -99,12 +118,21 @@ const Footer = () => {
                             <ul className="space-y-3">
                                 {navigationLinks.legal.map((link, index) => (
                                     <li key={index}>
-                                        <a 
-                                            href={link.href}
-                                            className="text-white/80 hover:text-white transition-colors duration-200 text-base"
-                                        >
-                                            {link.name}
-                                        </a>
+                                        {link.href.startsWith('/') ? (
+                                            <Link
+                                                to={link.href}
+                                                className="text-white/80 hover:text-white transition-colors duration-200 text-base"
+                                            >
+                                                {link.name}
+                                            </Link>
+                                        ) : (
+                                            <a
+                                                href={link.href}
+                                                className="text-white/80 hover:text-white transition-colors duration-200 text-base"
+                                            >
+                                                {link.name}
+                                            </a>
+                                        )}
                                     </li>
                                 ))}
                             </ul>

@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 import CounselorPage from "./pages/Counselor";
 import CounselorDetailPage from "./pages/CounselorDetail/inde";
 import RegisterPage from "./pages/Register";
+import FqsPage from "./pages/Fqs";
 
 const AppRoutes = () => {
   return (
@@ -15,9 +16,9 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/counselor" element={<CounselorPage />} />
+        <Route path="/fqs" element={<FqsPage />} />
         <Route path="/counselor-detail/:id" element={<CounselorDetailPage />} />
         <Route path="/register" element={<RegisterPage />} />
-
       </Routes>
       <Footer />
     </>
