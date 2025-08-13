@@ -23,7 +23,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-4 sm:py-8">
+        <div className="min-h-screen bg-white-50 flex items-center justify-center px-4 py-4 sm:py-8">
             <div className="w-full max-w-6xl">
                 {/* Main Card Container - Mobile responsive */}
                 <div className="bg-white rounded-3xl shadow-lg overflow-hidden lg:max-h-[650px]">

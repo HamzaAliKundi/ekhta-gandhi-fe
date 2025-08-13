@@ -11,7 +11,8 @@ const Footer = () => {
         ],
         resources: [
             { name: 'Faqs', href: '/fqs' },
-            { name: 'Counselor', href: '/counselor' }
+            { name: 'Counselor', href: '/counselor' },
+            { name: 'Blog', href: '/blog' }
         ],
         legal: [
             { name: 'Privacy Policy', href: '#' },

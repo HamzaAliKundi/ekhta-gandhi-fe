@@ -7,8 +7,9 @@ import CounselorPage from "./pages/Counselor";
 import CounselorDetailPage from "./pages/CounselorDetail/inde";
 import RegisterPage from "./pages/Register";
 import FqsPage from "./pages/Fqs";
-
 import ContactPage from "./pages/Contact";
+import BlogPage from "./pages/Blog";
+import BlogPostPage from "./components/Blog/BlogPost";
 
 const AppRoutes = () => {
   return (
@@ -23,6 +24,8 @@ const AppRoutes = () => {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/signup" element={<RegisterPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:id" element={<BlogPostPage />} />
       </Routes>
       <Footer />
     </>
