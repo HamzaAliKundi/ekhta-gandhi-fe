@@ -49,7 +49,7 @@ const Navbar = () => {
             className="w-[140px] h-[42px] px-[20px] py-2 flex items-center justify-center gap-[12px] rounded-[25px] border border-white bg-transparent text-white hover:bg-white hover:text-[#5B7C99] transition-all"
           >
             <span className="text-base font-medium">Sign up</span>
-            <img src="/public/common/logout.svg" alt="Logout icon" className="w-4 h-4" />
+            <img src="/common/logout.svg" alt="Logout icon" className="w-4 h-4" />
           </Link>
           
           {/* Sign up button */}
