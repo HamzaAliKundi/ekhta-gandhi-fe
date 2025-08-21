@@ -56,7 +56,7 @@ const Navbar = () => {
             <div className="absolute top-full left-0 mt-2 w-[220px] bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
               <div className="py-3">
                 <a 
-                  href="https://ekhta-gandhi-user.vercel.app/" 
+                  href="https://ekhta-gandhi-user.vercel.app/login" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block px-5 py-3 text-[14px] text-gray-700 hover:bg-gray-50 transition-all duration-200 font-outfit font-medium"
@@ -64,7 +64,7 @@ const Navbar = () => {
                   Login as Student
                 </a>
                 <a 
-                  href="https://ekhta-gandhi-counsellor.app/" 
+                  href="https://ekhta-gandhi-counselor.vercel.app/login" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block px-5 py-3 text-[14px] text-gray-700 hover:bg-gray-50 transition-all duration-200 font-outfit font-medium"
@@ -109,7 +109,7 @@ const Navbar = () => {
           {/* Mobile Login options */}
           <div className="w-full max-w-[280px] space-y-4">
             <a 
-              href="https://ekhta-gandhi-user.vercel.app/" 
+              href="https://ekhta-gandhi-user.vercel.app/login" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-full h-[44px] px-[24px] py-2 flex items-center justify-center gap-[8px] rounded-[22px] border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#5B7C99] transition-all duration-300 shadow-sm hover:shadow-md"
@@ -118,7 +118,7 @@ const Navbar = () => {
               <span className="text-[15px] font-semibold font-outfit tracking-wide">Login as Student</span>
             </a>
             <a 
-              href="https://ekhta-gandhi-counsellor.app/" 
+              href="https://ekhta-gandhi-counselor.vercel.app/login" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-full h-[44px] px-[24px] py-2 flex items-center justify-center gap-[8px] rounded-[22px] border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#5B7C99] transition-all duration-300 shadow-sm hover:shadow-md"
