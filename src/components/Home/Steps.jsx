@@ -24,7 +24,7 @@ const HomePageSteps = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Title */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-normal text-black font-poppins leading-tight px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-normal text-black font-outfit leading-tight px-4">
             Get started in 3 simple steps
           </h2>
         </div>
@@ -42,7 +42,7 @@ const HomePageSteps = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-black font-poppins font-normal leading-tight mb-4 sm:mb-6 text-xl sm:text-2xl lg:text-[42px]">
+              <h3 className="text-black font-outfit font-normal leading-tight mb-4 sm:mb-6 text-[20px] sm:text-2xl lg:text-[30px]">
                 {step.title}
               </h3>
 

@@ -35,8 +35,8 @@ const Footer = () => {
     );
 
     return (
-        <footer className="max-w-[1440px] mx-auto bg-[#6B8CAE] text-white">
-            <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+        <footer className="max-w-[1680px] mx-auto bg-[#6B8CAE] text-white">
+            <div className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
                 {/* Main Footer Content */}
                 <div className="flex flex-col gap-8 lg:gap-12">
 
@@ -46,7 +46,7 @@ const Footer = () => {
                         {/* Logo and Description */}
                         <div className="lg:col-span-1 max-w-[200px]">
                             <div className="mb-6">
-                                <h2 className="text-3xl lg:text-4xl font-bold font-poppins">
+                                <h2 className="text-3xl lg:text-4xl font-bold font-outfit">
                                     Logo
                                 </h2>
                             </div>
@@ -57,7 +57,7 @@ const Footer = () => {
 
                         {/* Pages */}
                         <div className="max-w-[100px]">
-                            <h3 className="text-xl font-semibold mb-4 lg:mb-6 font-poppins">
+                            <h3 className="text-xl font-semibold mb-4 lg:mb-6 font-outfit">
                                 Pages
                             </h3>
                             <ul className="space-y-3">
@@ -86,7 +86,7 @@ const Footer = () => {
 
                         {/* Resources */}
                         <div className="max-w-[100px]">
-                            <h3 className="text-xl font-semibold mb-4 lg:mb-6 font-poppins">
+                            <h3 className="text-xl font-semibold mb-4 lg:mb-6 font-outfit">
                                 Resources
                             </h3>
                             <ul className="space-y-3">
@@ -115,7 +115,7 @@ const Footer = () => {
 
                         {/* Legal */}
                         <div className="max-w-[100px]">
-                            <h3 className="text-xl font-semibold mb-4 lg:mb-6 font-poppins">
+                            <h3 className="text-xl font-semibold mb-4 lg:mb-6 font-outfit">
                                 Legal
                             </h3>
                             <ul className="space-y-3">
@@ -144,7 +144,7 @@ const Footer = () => {
 
                         {/* Contact Us */}
                         <div className="w-full max-w-[180px]">
-                            <h4 className="text-xl font-semibold mb-4 lg:mb-6 font-poppins">
+                            <h4 className="text-xl font-semibold mb-4 lg:mb-6 font-outfit">
                                 Contact Us
                             </h4>
                             <div className="space-y-3 text-white/80 text-base">

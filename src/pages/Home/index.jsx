@@ -7,7 +7,7 @@ import StudentFirstSection from "../../components/Home/Student";
 const HomePage = () => {
     return(
         <>
-        <div className="max-w-[1440px] mx-auto">
+        <div className="max-w-[1680px] mx-auto">
             <HomePageHeader />
             <HomePageSteps />
             <HomePageText />

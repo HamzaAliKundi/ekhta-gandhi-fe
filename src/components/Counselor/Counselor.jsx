@@ -63,12 +63,12 @@ const Counselor = () => {
 
   return (
     <div className="w-full bg-gray-50 py-16 min-h-screen">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+      <div className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
         
         {/* Top Section - Search and Filters */}
         <div className="mb-6 lg:mb-8 w-full max-w-4xl mx-auto">
           {/* Title */}
-          <h1 className="font-poppins font-normal text-2xl sm:text-3xl lg:text-[42px] leading-tight text-black mb-4 lg:mb-6">
+          <h1 className="font-outfit font-normal text-2xl sm:text-3xl lg:text-[42px] leading-tight text-black mb-4 lg:mb-6">
             Search Counselors
           </h1>
 
@@ -85,7 +85,7 @@ const Counselor = () => {
             <input
               type="text"
               placeholder="Search"
-              className="text-[#5B7C99] font-poppins font-normal text-sm lg:text-base flex-1 outline-none bg-transparent"
+              className="text-[#5B7C99] font-outfit font-normal text-sm lg:text-base flex-1 outline-none bg-transparent"
             />
             
             {/* Right Search Button */}
@@ -96,9 +96,9 @@ const Counselor = () => {
 
           {/* Filter Options */}
           <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 mb-4 lg:mb-6 w-full">
-            <div className="flex flex-col gap-2 w-full sm:w-32 lg:w-[120px] h-16 lg:h-[64px]">
-              <label className="text-black font-poppins font-normal text-sm lg:text-base">Price:</label>
-              <select className="flex-1 px-3 py-2 border border-[#5B7C99] rounded-3xl bg-white text-black font-poppins font-normal text-sm lg:text-base outline-none">
+                          <div className="flex flex-col gap-2 w-full sm:w-32 lg:w-[120px] h-16 lg:h-[64px]">
+                <label className="text-black font-outfit font-normal text-sm lg:text-base">Price:</label>
+                <select className="flex-1 px-3 py-2 border border-[#5B7C99] rounded-3xl bg-white text-black font-outfit font-normal text-sm lg:text-base outline-none">
                 <option>Any</option>
                 <option>$0-$25</option>
                 <option>$25-$50</option>
@@ -107,8 +107,8 @@ const Counselor = () => {
             </div>
             
             <div className="flex flex-col gap-2 w-full sm:flex-1 lg:w-[280px] h-16 lg:h-[64px]">
-              <label className="text-black font-poppins font-normal text-sm lg:text-base">Topic:</label>
-              <select className="flex-1 px-3 py-2 border border-[#5B7C99] rounded-3xl bg-white text-black font-poppins font-normal text-sm lg:text-base outline-none">
+              <label className="text-black font-outfit font-normal text-sm lg:text-base">Topic:</label>
+              <select className="flex-1 px-3 py-2 border border-[#5B7C99] rounded-3xl bg-white text-black font-outfit font-normal text-sm lg:text-base outline-none">
                 <option>- Select Subject -</option>
                 <option>Mathematics</option>
                 <option>Science</option>
@@ -118,8 +118,8 @@ const Counselor = () => {
             </div>
             
             <div className="flex flex-col gap-2 w-full sm:flex-1 lg:w-[280px] h-16 lg:h-[64px]">
-              <label className="text-black font-poppins font-normal text-sm lg:text-base">Expertise:</label>
-              <select className="flex-1 px-3 py-2 border border-[#5B7C99] rounded-3xl bg-white text-black font-poppins font-normal text-sm lg:text-base outline-none">
+              <label className="text-black font-outfit font-normal text-sm lg:text-base">Expertise:</label>
+              <select className="flex-1 px-3 py-2 border border-[#5B7C99] rounded-3xl bg-white text-black font-outfit font-normal text-sm lg:text-base outline-none">
                 <option>- Select Any Three -</option>
                 <option>Beginner</option>
                 <option>Intermediate</option>
@@ -131,7 +131,7 @@ const Counselor = () => {
 
           {/* Counselor Count */}
           <div className="w-full">
-            <p className="font-poppins font-normal text-lg sm:text-xl lg:text-[26px] leading-tight text-black">
+            <p className="font-outfit font-normal text-lg sm:text-xl lg:text-[26px] leading-tight text-black">
               35 Counselors for this subject are available here
             </p>
           </div>
@@ -157,7 +157,7 @@ const Counselor = () => {
                 {/* Card Content - Center section */}
                 <div className="flex-1 min-w-0">
                   {/* Name */}
-                  <h3 className="text-xl sm:text-2xl lg:text-[26px] font-normal text-black font-poppins mb-2 lg:mb-3 leading-tight">
+                  <h3 className="text-xl sm:text-2xl lg:text-[26px] font-normal text-black font-outfit mb-2 lg:mb-3 leading-tight">
                     {counselor.name}
                   </h3>
                   
@@ -167,13 +167,13 @@ const Counselor = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-sm sm:text-base lg:text-[16px] font-normal text-black font-poppins leading-relaxed lg:leading-tight mb-3 lg:mb-4">
+                  <p className="text-sm sm:text-base lg:text-[16px] font-normal text-black font-outfit leading-relaxed lg:leading-tight mb-3 lg:mb-4">
                     {counselor.description}
                   </p>
 
                   {/* Learn More Link */}
                   <div className="mb-4 sm:mb-0">
-                    <Link onClick={() => window.scrollTo(0, 0)} to={`/counselor-detail/${counselor.id}`} className="text-sm sm:text-base lg:text-[16px] font-normal text-black font-poppins underline inline-flex items-center gap-2">
+                    <Link onClick={() => window.scrollTo(0, 0)} to={`/counselor-detail/${counselor.id}`} className="text-sm sm:text-base lg:text-[16px] font-normal text-black font-outfit underline inline-flex items-center gap-2">
                       Learn more
                       <svg className="w-4 h-4 transform rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17l9.2-9.2M17 17V7H7" />
@@ -186,7 +186,7 @@ const Counselor = () => {
                 <div className="flex flex-row sm:flex-col justify-between sm:justify-start items-start sm:items-end gap-4 flex-shrink-0">
                   {/* Hourly Rate */}
                   <div className="sm:mb-8 lg:mb-16">
-                    <p className="text-xl sm:text-2xl lg:text-[26px] font-normal text-black font-poppins leading-tight">
+                    <p className="text-lg sm:text-2xl lg:text-[20px] font-normal text-black font-outfit leading-tight">
                       {counselor.hourlyRate}
                     </p>
                   </div>
@@ -194,7 +194,7 @@ const Counselor = () => {
                   {/* Action Buttons */}
                   <div className="flex flex-row sm:flex-col gap-2 lg:gap-3 w-full sm:w-auto">
                     <button 
-                      className="w-full sm:w-48 lg:w-[193px] h-10 lg:h-[48px] text-white px-3 py-2 lg:py-3 rounded-3xl hover:opacity-90 transition-all flex items-center justify-center gap-2 lg:gap-3 font-poppins text-sm lg:text-[16px] font-normal"
+                      className="w-full sm:w-48 lg:w-[193px] h-10 lg:h-[48px] text-white px-3 py-2 lg:py-3 rounded-3xl hover:opacity-90 transition-all flex items-center justify-center gap-2 lg:gap-3 font-outfit text-sm lg:text-[16px] font-normal"
                       style={{ backgroundColor: '#5B7C99' }}
                     >
                       <MessageCircle size={14} className="lg:w-4 lg:h-4" />
@@ -202,7 +202,7 @@ const Counselor = () => {
                       <span className="sm:hidden">Message</span>
                     </button>
                     <button 
-                      className="w-full sm:w-48 lg:w-[193px] h-10 lg:h-[48px] text-white px-3 py-2 lg:py-3 rounded-3xl hover:opacity-90 transition-all flex items-center justify-center gap-2 lg:gap-3 font-poppins text-sm lg:text-[16px] font-normal"
+                      className="w-full sm:w-48 lg:w-[193px] h-10 lg:h-[48px] text-white px-3 py-2 lg:py-3 rounded-3xl hover:opacity-90 transition-all flex items-center justify-center gap-2 lg:gap-3 font-outfit text-sm lg:text-[16px] font-normal"
                       style={{ backgroundColor: '#5B7C99' }}
                     >
                       <Calendar size={14} className="lg:w-4 lg:h-4" />

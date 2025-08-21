@@ -48,7 +48,7 @@ const Register = () => {
 
                                 {/* Title */}
                                 <div className="mb-6 sm:mb-8">
-                                    <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-normal text-gray-900 font-poppins">
+                                    <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-normal text-gray-900 font-outfit">
                                         Create an Account
                                     </h1>
                                 </div>
@@ -60,7 +60,7 @@ const Register = () => {
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2">
                                         {/* Full Name - Mobile responsive */}
                                         <div className="space-y-2">
-                                            <label htmlFor="fullName" className="block text-sm sm:text-base font-normal text-gray-700 font-poppins">
+                                            <label htmlFor="fullName" className="block text-sm sm:text-base font-normal text-gray-700 font-outfit">
                                                 Full Name*
                                             </label>
                                             <input
@@ -70,7 +70,7 @@ const Register = () => {
                                                 value={formData.fullName}
                                                 onChange={handleInputChange}
                                                 placeholder="Jhon Doe"
-                                                className="w-full md:max-w-[455.5px] h-12 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all font-poppins text-sm sm:text-base placeholder-gray-400"
+                                                className="w-full md:max-w-[455.5px] h-12 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all font-outfit text-sm sm:text-base placeholder-gray-400"
                                                 style={{
                                                     paddingTop: '12px',
                                                     paddingRight: '16px',
@@ -83,7 +83,7 @@ const Register = () => {
 
                                         {/* Email Address - Mobile responsive */}
                                         <div className="space-y-2">
-                                            <label htmlFor="email" className="block text-sm sm:text-base font-normal text-gray-700 font-poppins">
+                                            <label htmlFor="email" className="block text-sm sm:text-base font-normal text-gray-700 font-outfit">
                                                 Email Address*
                                             </label>
                                             <input
@@ -93,7 +93,7 @@ const Register = () => {
                                                 value={formData.email}
                                                 onChange={handleInputChange}
                                                 placeholder="Apple@gmail.com"
-                                                className="w-full md:max-w-[455.5px] h-12 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all font-poppins text-sm sm:text-base placeholder-gray-400"
+                                                className="w-full md:max-w-[455.5px] h-12 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all font-outfit text-sm sm:text-base placeholder-gray-400"
                                                 style={{
                                                     paddingTop: '12px',
                                                     paddingRight: '16px',
@@ -109,7 +109,7 @@ const Register = () => {
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2">
                                         {/* Enter New Password - Mobile responsive */}
                                         <div className="space-y-2">
-                                            <label htmlFor="password" className="block text-sm sm:text-base font-normal text-gray-700 font-poppins">
+                                            <label htmlFor="password" className="block text-sm sm:text-base font-normal text-gray-700 font-outfit">
                                                 Enter New Password
                                             </label>
                                             <input
@@ -119,7 +119,7 @@ const Register = () => {
                                                 value={formData.password}
                                                 onChange={handleInputChange}
                                                 placeholder="Password must be 8 letters"
-                                                className="w-full md:max-w-[455.5px] h-12 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all font-poppins text-sm sm:text-base placeholder-gray-400"
+                                                className="w-full md:max-w-[455.5px] h-12 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all font-outfit text-sm sm:text-base placeholder-gray-400"
                                                 style={{
                                                     paddingTop: '12px',
                                                     paddingRight: '16px',
@@ -132,7 +132,7 @@ const Register = () => {
 
                                         {/* Confirm Password - Mobile responsive */}
                                         <div className="space-y-2">
-                                            <label htmlFor="confirmPassword" className="block text-sm sm:text-base font-normal text-gray-700 font-poppins">
+                                            <label htmlFor="confirmPassword" className="block text-sm sm:text-base font-normal text-gray-700 font-outfit">
                                                 Confirm Password
                                             </label>
                                             <input
@@ -142,7 +142,7 @@ const Register = () => {
                                                 value={formData.confirmPassword}
                                                 onChange={handleInputChange}
                                                 placeholder="Type again"
-                                                className="w-full md:max-w-[455.5px] h-12 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all font-poppins text-sm sm:text-base placeholder-gray-400"
+                                                className="w-full md:max-w-[455.5px] h-12 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all font-outfit text-sm sm:text-base placeholder-gray-400"
                                                 style={{
                                                     paddingTop: '12px',
                                                     paddingRight: '16px',
@@ -159,7 +159,7 @@ const Register = () => {
 
                                         {/* Sign-up with social options */}
                                         <div className="flex flex-col sm:flex-row sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
-                                            <span className="text-sm sm:text-base font-normal text-gray-700 font-poppins">Sign-up with</span>
+                                            <span className="text-sm sm:text-base font-normal text-gray-700 font-outfit">Sign-up with</span>
 
                                             {/* Social Login Buttons */}
                                             <div className="flex space-x-3">
@@ -201,7 +201,7 @@ const Register = () => {
                                         {/* Next Button - Mobile responsive */}
                                         <button
                                             type="submit"
-                                            className="w-full sm:w-auto px-6 sm:px-8 py-3 text-white rounded-lg hover:opacity-90 transition-colors font-poppins text-sm sm:text-base font-normal flex items-center justify-center space-x-2"
+                                            className="w-full sm:w-auto px-6 sm:px-8 py-3 text-white rounded-lg hover:opacity-90 transition-colors font-outfit text-sm sm:text-base font-normal flex items-center justify-center space-x-2"
                                             style={{ backgroundColor: '#5B7C99' }}
                                         >
                                             <span>Next</span>

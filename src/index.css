@@ -1,12 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom font family for Poppins */
-.font-poppins {
-  font-family: 'Poppins', sans-serif;
+/* Custom font family for Outfit */
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Global font family override */
+body {
+  font-family: 'Outfit', sans-serif;
 }
 
 /* For Webkit browsers (Chrome, Safari) */
