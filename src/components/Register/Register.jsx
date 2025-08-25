@@ -48,7 +48,7 @@ const Register = () => {
 
                                 {/* Title */}
                                 <div className="mb-6 sm:mb-8">
-                                    <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-normal text-gray-900 font-outfit">
+                                    <h1 className="text-h1 lg:text-h1-lg font-normal text-gray-900 font-outfit">
                                         Create an Account
                                     </h1>
                                 </div>
@@ -60,7 +60,7 @@ const Register = () => {
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2">
                                         {/* Full Name - Mobile responsive */}
                                         <div className="space-y-2">
-                                            <label htmlFor="fullName" className="block text-sm sm:text-base font-normal text-gray-700 font-outfit">
+                                            <label htmlFor="fullName" className="block text-body lg:text-body-lg font-normal text-gray-700 font-outfit">
                                                 Full Name*
                                             </label>
                                             <input
@@ -83,7 +83,7 @@ const Register = () => {
 
                                         {/* Email Address - Mobile responsive */}
                                         <div className="space-y-2">
-                                            <label htmlFor="email" className="block text-sm sm:text-base font-normal text-gray-700 font-outfit">
+                                            <label htmlFor="email" className="block text-body lg:text-body-lg font-normal text-gray-700 font-outfit">
                                                 Email Address*
                                             </label>
                                             <input
@@ -109,7 +109,7 @@ const Register = () => {
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2">
                                         {/* Enter New Password - Mobile responsive */}
                                         <div className="space-y-2">
-                                            <label htmlFor="password" className="block text-sm sm:text-base font-normal text-gray-700 font-outfit">
+                                            <label htmlFor="password" className="block text-body lg:text-body-lg font-normal text-gray-700 font-outfit">
                                                 Enter New Password
                                             </label>
                                             <input
@@ -132,7 +132,7 @@ const Register = () => {
 
                                         {/* Confirm Password - Mobile responsive */}
                                         <div className="space-y-2">
-                                            <label htmlFor="confirmPassword" className="block text-sm sm:text-base font-normal text-gray-700 font-outfit">
+                                            <label htmlFor="confirmPassword" className="block text-body lg:text-body-lg font-normal text-gray-700 font-outfit">
                                                 Confirm Password
                                             </label>
                                             <input
@@ -159,7 +159,7 @@ const Register = () => {
 
                                         {/* Sign-up with social options */}
                                         <div className="flex flex-col sm:flex-row sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
-                                            <span className="text-sm sm:text-base font-normal text-gray-700 font-outfit">Sign-up with</span>
+                                            <span className="text-body lg:text-body-lg font-normal text-gray-700 font-outfit">Sign-up with</span>
 
                                             {/* Social Login Buttons */}
                                             <div className="flex space-x-3">

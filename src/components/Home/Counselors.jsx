@@ -26,7 +26,7 @@ const HomePageCounselors = () => {
     <div className="w-full flex justify-center min-h-[450px] bg-[#EEF5FF] py-8">
       <div className="w-full max-w-7xl px-4 py-8 md:py-16">
         {/* Title */}
-        <h2 className="font-outfit font-normal text-black mb-8 md:mb-12 text-2xl md:text-3xl lg:text-[42px] leading-[100%] tracking-[-0.02em] text-center md:text-left">
+        <h2 className="font-outfit font-normal text-black mb-8 md:mb-12 text-h2 lg:text-h2-lg leading-[100%] tracking-[-0.02em] text-center md:text-left">
           Explore counselors
         </h2>
 
@@ -48,7 +48,7 @@ const HomePageCounselors = () => {
 
               {/* Name and Rating - Positioned in front of image horizontally */}
               <div className="absolute top-8 left-16 md:left-14 right-6 z-10">
-                <h3 className="font-outfit font-normal text-black mb-2 text-xl md:text-2xl lg:text-[26px] leading-[100%] tracking-[0%]">
+                <h3 className="font-outfit font-normal text-black mb-2 text-h3 lg:text-h3-lg leading-[100%] tracking-[0%]">
                   {counselor.name}
                 </h3>
                 
@@ -67,7 +67,7 @@ const HomePageCounselors = () => {
 
               {/* Description - Positioned closer to stars with reduced gap */}
               <div className="absolute top-28 md:top-24 left-6 right-6 bottom-14 z-10 overflow-hidden">
-                <p className="font-outfit font-normal text-black text-sm md:text-base leading-relaxed tracking-[0%] line-clamp-4">
+                <p className="font-outfit font-normal text-black text-body lg:text-body-lg leading-relaxed tracking-[0%] line-clamp-4">
                   {counselor.description}
                 </p>
               </div>
@@ -76,7 +76,7 @@ const HomePageCounselors = () => {
               <div className="absolute bottom-4 right-6 z-10">
                 <a 
                   href="#"
-                  className="font-outfit font-normal text-black underline inline-flex items-center gap-1 text-sm md:text-base leading-[100%] tracking-[0%] hover:text-blue-600 transition-colors"
+                  className="font-outfit font-normal text-black underline inline-flex items-center gap-1 text-body lg:text-body-lg leading-[100%] tracking-[0%] hover:text-blue-600 transition-colors"
                 >
                   Learn more
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

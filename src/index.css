@@ -1,17 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom font family for Outfit */
+/* Custom font family classes */
 .font-outfit {
   font-family: 'Outfit', sans-serif;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.font-open-sans {
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* Global font family override */
 body {
   font-family: 'Outfit', sans-serif;
+}
+
+/* Responsive Typography Utilities */
+@layer utilities {
+  /* H1 Hero Title - Responsive */
+  .text-h1-responsive {
+    font-size: clamp(28px, 6vw, 40px);
+    line-height: 1.2;
+    font-weight: 400;
+  }
+  
+  @media (min-width: 768px) {
+    .text-h1-responsive {
+      font-size: clamp(32px, 4.5vw, 52px);
+    }
+  }
+  
+  /* H2 Section Title - Responsive */
+  .text-h2-responsive {
+    font-size: clamp(22px, 4.5vw, 28px);
+    line-height: 1.3;
+    font-weight: 400;
+  }
+  
+  @media (min-width: 768px) {
+    .text-h2-responsive {
+      font-size: clamp(26px, 3vw, 36px);
+    }
+  }
+  
+  /* H3 Card/Subhead - Responsive */
+  .text-h3-responsive {
+    font-size: clamp(18px, 3.5vw, 20px);
+    line-height: 1.4;
+    font-weight: 400;
+  }
+  
+  @media (min-width: 768px) {
+    .text-h3-responsive {
+      font-size: clamp(20px, 2.2vw, 24px);
+    }
+  }
+  
+  /* Body Text - Responsive */
+  .text-body-responsive {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  
+  @media (min-width: 768px) {
+    .text-body-responsive {
+      font-size: 16px;
+    }
+  }
+  
+  /* Small Text - Responsive */
+  .text-small-responsive {
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+  
+  @media (min-width: 768px) {
+    .text-small-responsive {
+      font-size: 13px;
+    }
+  }
+  
+  /* Button Text - Responsive */
+  .text-button-responsive {
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  
+  @media (min-width: 768px) {
+    .text-button-responsive {
+      font-size: 15px;
+    }
+  }
 }
 
 /* For Webkit browsers (Chrome, Safari) */

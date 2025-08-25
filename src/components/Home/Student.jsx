@@ -29,7 +29,7 @@ const StudentFirstSection = () => {
                     {/* Left Section - Image and Title */}
                     <div className="w-full lg:w-1/2 flex flex-col gap-4 sm:gap-6 order-2 lg:order-1">
                         {/* Title */}
-                        <h2 className="font-outfit font-medium text-black text-2xl sm:text-3xl md:text-4xl lg:text-[51px] leading-tight lg:leading-[100%] tracking-[0%] text-center lg:text-left">
+                        <h2 className="font-outfit font-medium text-black text-h2 lg:text-h2-lg leading-tight lg:leading-[100%] tracking-[0%] text-center lg:text-left">
                             Student first, Always
                         </h2>
                         

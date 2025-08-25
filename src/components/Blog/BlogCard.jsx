@@ -14,7 +14,7 @@ const BlogCard = ({ id, image, title, readTime, className = "" }) => {
 
                 {/* Read Time Badge */}
                 <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
-                    <span className="bg-white text-gray-800 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium shadow-sm">
+                    <span className="bg-white text-gray-800 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-small lg:text-small-lg font-medium shadow-sm">
                         {readTime}
                     </span>
                 </div>
@@ -26,7 +26,7 @@ const BlogCard = ({ id, image, title, readTime, className = "" }) => {
                 style={{ backgroundColor: '#5B7C99' }}
             >
                 {/* Title */}
-                <h3 className="text-white font-medium text-base sm:text-xl leading-snug mb-2 sm:mb-4">
+                <h3 className="text-white font-medium text-h3 lg:text-h3-lg leading-snug mb-2 sm:mb-4">
                     {title}
                 </h3>
 
@@ -36,7 +36,7 @@ const BlogCard = ({ id, image, title, readTime, className = "" }) => {
                         to={`/blog/${id}`}
                         className="flex items-center space-x-1 sm:space-x-2 text-white hover:text-gray-200 transition-colors"
                     >
-                        <span className="text-sm sm:text-base underline">Read more</span>
+                        <span className="text-body lg:text-body-lg underline">Read more</span>
                         <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>

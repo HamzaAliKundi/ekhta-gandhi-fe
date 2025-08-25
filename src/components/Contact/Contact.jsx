@@ -48,7 +48,7 @@ const Contact = () => {
                                 
                                 {/* Title */}
                                 <div className="mb-6 sm:mb-8">
-                                    <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-normal text-gray-900 font-outfit">
+                                    <h1 className="text-h1 lg:text-h1-lg font-normal text-gray-900 font-outfit">
                                         Have a question?
                                     </h1>
                                 </div>
@@ -60,7 +60,7 @@ const Contact = () => {
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2">
                                         {/* First Name */}
                                         <div className="space-y-2">
-                                                                                         <label htmlFor="firstName" className="block text-sm sm:text-base font-normal text-gray-700 font-outfit">
+                                                                                         <label htmlFor="firstName" className="block text-body lg:text-body-lg font-normal text-gray-700 font-outfit">
                                                 First name
                                             </label>
                                                                                          <input
@@ -83,7 +83,7 @@ const Contact = () => {
 
                                         {/* Last Name */}
                                         <div className="space-y-2">
-                                                                                         <label htmlFor="lastName" className="block text-sm sm:text-base font-normal text-gray-700 font-outfit">
+                                                                                         <label htmlFor="lastName" className="block text-body lg:text-body-lg font-normal text-gray-700 font-outfit">
                                                 Last name
                                             </label>
                                                                                          <input

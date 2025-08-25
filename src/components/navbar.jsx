@@ -27,14 +27,14 @@ const Navbar = () => {
         <div className="hidden md:flex items-center justify-center gap-[32px] w-[400px] h-[40px]">
           <Link 
             to="/counselor" 
-            className={`text-white hover:text-gray-100 transition-all duration-300 font-outfit font-semibold text-[15px] leading-none tracking-wide ${isActive('/counselor') ? 'text-gray-100' : 'text-white'}`}
+            className={`text-white hover:text-gray-100 transition-all duration-300 font-outfit text-button lg:text-button-lg leading-none tracking-wide ${isActive('/counselor') ? 'text-gray-100' : 'text-white'}`}
             onClick={handleLinkClick}
           >
             Find Counselor
           </Link>
           <Link 
             to="/signup" 
-            className={`text-white hover:text-gray-100 transition-all duration-300 font-outfit font-semibold text-[15px] leading-none tracking-wide ${isActive('/become-counselor') ? 'text-gray-100' : 'text-white'}`}
+            className={`text-white hover:text-gray-100 transition-all duration-300 font-outfit text-button lg:text-button-lg leading-none tracking-wide ${isActive('/become-counselor') ? 'text-gray-100' : 'text-white'}`}
             onClick={handleLinkClick}
           >
             Become Counselor
@@ -46,7 +46,7 @@ const Navbar = () => {
           {/* Login dropdown */}
           <div className="relative group">
             <button className="w-[140px] h-[44px] px-[24px] py-2 flex items-center justify-center gap-[8px] rounded-[22px] border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#5B7C99] transition-all duration-300 shadow-sm hover:shadow-md">
-              <span className="text-[15px] font-semibold font-outfit tracking-wide">Login</span>
+              <span className="text-button lg:text-button-lg font-semibold font-outfit tracking-wide">Login</span>
               <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -55,22 +55,22 @@ const Navbar = () => {
             {/* Dropdown menu */}
             <div className="absolute top-full left-0 mt-2 w-[220px] bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
               <div className="py-3">
-                <a 
-                  href="https://ekhta-gandhi-user.vercel.app/login" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="block px-5 py-3 text-[14px] text-gray-700 hover:bg-gray-50 transition-all duration-200 font-outfit font-medium"
-                >
-                  Login as Student
-                </a>
-                <a 
-                  href="https://ekhta-gandhi-counselor.vercel.app/login" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="block px-5 py-3 text-[14px] text-gray-700 hover:bg-gray-50 transition-all duration-200 font-outfit font-medium"
-                >
-                  Login as Counsellor
-                </a>
+                                 <a 
+                   href="https://ekhta-gandhi-user.vercel.app/login" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   className="block px-5 py-3 text-small lg:text-small-lg text-gray-700 hover:bg-gray-50 transition-all duration-200 font-outfit font-medium"
+                 >
+                   Login as Student
+                 </a>
+                 <a 
+                   href="https://ekhta-gandhi-counselor.vercel.app/login" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   className="block px-5 py-3 text-small lg:text-small-lg text-gray-700 hover:bg-gray-50 transition-all duration-200 font-outfit font-medium"
+                 >
+                   Login as Counsellor
+                 </a>
               </div>
             </div>
           </div>
@@ -128,8 +128,8 @@ const Navbar = () => {
             </a>
           </div>
           
-          <Link to="/signup" className="w-full max-w-[280px] h-[44px] px-[24px] py-2 flex items-center justify-center gap-[8px] rounded-[22px] border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#5B7C99] transition-all duration-300 shadow-sm hover:shadow-md group" onClick={handleLinkClick}>
-            <span className="text-[15px] font-semibold font-outfit tracking-wide">Sign up</span>
+                     <Link to="/signup" className="w-full max-w-[280px] h-[44px] px-[24px] py-2 flex items-center justify-center gap-[8px] rounded-[22px] border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#5B7C99] transition-all duration-300 shadow-sm hover:shadow-md group" onClick={handleLinkClick}>
+             <span className="text-button lg:text-button-lg font-semibold font-outfit tracking-wide">Sign up</span>
             <img src="/common/logout.svg" alt="Logout icon" className="w-4 h-4 group-hover:brightness-0 group-hover:invert group-hover:hue-rotate-[200deg] group-hover:saturate-[2]" />
           </Link>
         </div>

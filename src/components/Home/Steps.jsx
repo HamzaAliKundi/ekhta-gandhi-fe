@@ -24,7 +24,7 @@ const HomePageSteps = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Title */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-normal text-black font-outfit leading-tight px-4">
+          <h2 className="text-h2 lg:text-h2-lg font-normal text-black font-outfit leading-tight px-4">
             Get started in 3 simple steps
           </h2>
         </div>
@@ -34,15 +34,15 @@ const HomePageSteps = () => {
           {steps.map((step, index) => (
             <div 
               key={index}
-              className="bg-white rounded-3xl flex flex-col w-full max-w-xs sm:max-w-sm lg:max-w-[400px] h-[280px] sm:h-[320px] lg:h-[382px] p-4 sm:p-6 shadow-lg"
+              className="bg-white rounded-3xl flex flex-col w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[350px] h-[240px] sm:h-[280px] lg:h-[320px] p-4 sm:p-6 shadow-lg"
             >
               {/* Badge */}
-              <div className="inline-flex items-center justify-center text-white text-sm font-medium rounded-full mb-4 sm:mb-6 self-start bg-[#5B7C99] px-4 py-2 w-[88px] h-[31px]">
+              <div className="inline-flex items-center justify-center text-white text-xs font-medium rounded-full mb-4 sm:mb-6 self-start bg-[#5B7C99] px-3 py-1.5 w-[70px] h-[26px]">
                 Step {step.step}
               </div>
 
               {/* Title */}
-              <h3 className="text-black font-outfit font-normal leading-tight mb-4 sm:mb-6 text-[20px] sm:text-2xl lg:text-[30px]">
+              <h3 className="text-black font-outfit font-normal leading-tight mb-4 sm:mb-6 text-h3 lg:text-h3-lg">
                 {step.title}
               </h3>
 
@@ -51,7 +51,7 @@ const HomePageSteps = () => {
                 <img 
                   src={step.icon} 
                   alt={step.title}
-                  className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 object-contain"
+                  className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain"
                 />
               </div>
             </div>

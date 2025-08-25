@@ -68,7 +68,7 @@ const Counselor = () => {
         {/* Top Section - Search and Filters */}
         <div className="mb-6 lg:mb-8 w-full max-w-4xl mx-auto">
           {/* Title */}
-          <h1 className="font-outfit font-normal text-2xl sm:text-3xl lg:text-[42px] leading-tight text-black mb-4 lg:mb-6">
+                      <h1 className="font-outfit font-normal text-h1 lg:text-h1-lg leading-tight text-black mb-4 lg:mb-6">
             Search Counselors
           </h1>
 
@@ -131,7 +131,7 @@ const Counselor = () => {
 
           {/* Counselor Count */}
           <div className="w-full">
-            <p className="font-outfit font-normal text-lg sm:text-xl lg:text-[26px] leading-tight text-black">
+            <p className="font-outfit font-normal text-h3 lg:text-h3-lg leading-tight text-black">
               35 Counselors for this subject are available here
             </p>
           </div>
@@ -157,7 +157,7 @@ const Counselor = () => {
                 {/* Card Content - Center section */}
                 <div className="flex-1 min-w-0">
                   {/* Name */}
-                  <h3 className="text-xl sm:text-2xl lg:text-[26px] font-normal text-black font-outfit mb-2 lg:mb-3 leading-tight">
+                  <h3 className="text-h3 lg:text-h3-lg font-normal text-black font-outfit mb-2 lg:mb-3 leading-tight">
                     {counselor.name}
                   </h3>
                   
@@ -167,13 +167,13 @@ const Counselor = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-sm sm:text-base lg:text-[16px] font-normal text-black font-outfit leading-relaxed lg:leading-tight mb-3 lg:mb-4">
+                                      <p className="text-body lg:text-body-lg font-normal text-black font-outfit leading-relaxed lg:leading-tight mb-3 lg:mb-4">
                     {counselor.description}
                   </p>
 
                   {/* Learn More Link */}
                   <div className="mb-4 sm:mb-0">
-                    <Link onClick={() => window.scrollTo(0, 0)} to={`/counselor-detail/${counselor.id}`} className="text-sm sm:text-base lg:text-[16px] font-normal text-black font-outfit underline inline-flex items-center gap-2">
+                    <Link onClick={() => window.scrollTo(0, 0)} to={`/counselor-detail/${counselor.id}`} className="text-body lg:text-body-lg font-normal text-black font-outfit underline inline-flex items-center gap-2">
                       Learn more
                       <svg className="w-4 h-4 transform rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17l9.2-9.2M17 17V7H7" />
@@ -186,7 +186,7 @@ const Counselor = () => {
                 <div className="flex flex-row sm:flex-col justify-between sm:justify-start items-start sm:items-end gap-4 flex-shrink-0">
                   {/* Hourly Rate */}
                   <div className="sm:mb-8 lg:mb-16">
-                    <p className="text-lg sm:text-2xl lg:text-[20px] font-normal text-black font-outfit leading-tight">
+                    <p className="text-h3 lg:text-h3-lg font-normal text-black font-outfit leading-tight">
                       {counselor.hourlyRate}
                     </p>
                   </div>
@@ -194,7 +194,7 @@ const Counselor = () => {
                   {/* Action Buttons */}
                   <div className="flex flex-row sm:flex-col gap-2 lg:gap-3 w-full sm:w-auto">
                     <button 
-                      className="w-full sm:w-48 lg:w-[193px] h-10 lg:h-[48px] text-white px-3 py-2 lg:py-3 rounded-3xl hover:opacity-90 transition-all flex items-center justify-center gap-2 lg:gap-3 font-outfit text-sm lg:text-[16px] font-normal"
+                      className="w-full sm:w-48 lg:w-[193px] h-10 lg:h-[48px] text-white px-3 py-2 lg:py-3 rounded-3xl hover:opacity-90 transition-all flex items-center justify-center gap-2 lg:gap-3 font-outfit text-body lg:text-body-lg font-normal"
                       style={{ backgroundColor: '#5B7C99' }}
                     >
                       <MessageCircle size={14} className="lg:w-4 lg:h-4" />
@@ -202,7 +202,7 @@ const Counselor = () => {
                       <span className="sm:hidden">Message</span>
                     </button>
                     <button 
-                      className="w-full sm:w-48 lg:w-[193px] h-10 lg:h-[48px] text-white px-3 py-2 lg:py-3 rounded-3xl hover:opacity-90 transition-all flex items-center justify-center gap-2 lg:gap-3 font-outfit text-sm lg:text-[16px] font-normal"
+                      className="w-full sm:w-48 lg:w-[193px] h-10 lg:h-[48px] text-white px-3 py-2 lg:py-3 rounded-3xl hover:opacity-90 transition-all flex items-center justify-center gap-2 lg:gap-3 font-outfit text-body lg:text-body-lg font-normal"
                       style={{ backgroundColor: '#5B7C99' }}
                     >
                       <Calendar size={14} className="lg:w-4 lg:h-4" />
@@ -220,20 +220,20 @@ const Counselor = () => {
         <div className="flex flex-col items-center gap-3 sm:gap-4 mt-6 sm:mt-8 lg:mt-12">
           {/* Page Numbers */}
           <div className="flex items-center gap-1 sm:gap-2 lg:gap-3">
-            <button className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white rounded-lg font-medium text-xs sm:text-sm lg:text-base transition-colors" style={{backgroundColor: '#6C8BA6'}}>1</button>
-            <button className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg font-medium text-xs sm:text-sm lg:text-base transition-colors">2</button>
-            <button className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg font-medium text-xs sm:text-sm lg:text-base transition-colors">3</button>
-            <span className="px-1 sm:px-2 text-gray-600 text-xs sm:text-sm lg:text-base">...</span>
-            <button className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg font-medium text-xs sm:text-sm lg:text-base transition-colors">6</button>
-            <button className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg font-medium text-xs sm:text-sm lg:text-base transition-colors">7</button>
+            <button className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white rounded-lg font-medium text-small lg:text-small-lg transition-colors" style={{backgroundColor: '#6C8BA6'}}>1</button>
+            <button className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg font-medium text-small lg:text-small-lg transition-colors">2</button>
+            <button className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg font-medium text-small lg:text-small-lg transition-colors">3</button>
+            <span className="px-1 sm:px-2 text-gray-600 text-small lg:text-small-lg">...</span>
+            <button className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg font-medium text-small lg:text-small-lg transition-colors">6</button>
+            <button className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg font-medium text-small lg:text-small-lg transition-colors">7</button>
           </div>
           
           {/* Navigation Arrows */}
           <div className="flex items-center gap-4 sm:gap-6">
-            <button className="text-gray-600 hover:text-gray-800 transition-colors text-base sm:text-lg font-medium">
+            <button className="text-gray-600 hover:text-gray-800 transition-colors text-body lg:text-body-lg font-medium">
               ←
             </button>
-            <button className="text-gray-600 hover:text-gray-800 transition-colors text-base sm:text-lg font-medium">
+            <button className="text-gray-600 hover:text-gray-800 transition-colors text-body lg:text-body-lg font-medium">
               →
             </button>
           </div>
