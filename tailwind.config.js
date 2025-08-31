@@ -12,6 +12,14 @@ export default {
         'inter': ['Inter', 'sans-serif'],
         'roboto': ['Roboto', 'sans-serif'],
         'open-sans': ['Open Sans', 'sans-serif'],
+        'merriweather': ['Merriweather', 'serif'],
+        'roboto-condensed': ['Roboto Condensed', 'sans-serif'],
+        'canela-deck': ['Georgia', 'Times New Roman', 'serif'],
+        'gt-america': ['Inter', 'Arial', 'sans-serif'],
+        'source-sans': ['Inter', 'Arial', 'sans-serif'],
+        // Set default fonts
+        'sans': ['Inter', 'Arial', 'sans-serif'], // Source Sans for body
+        'serif': ['Merriweather', 'Georgia', 'serif'], // Merriweather for headers
       },
       fontSize: {
         // H1 (Hero Title) - Fluid scaling

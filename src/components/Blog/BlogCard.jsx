@@ -26,9 +26,9 @@ const BlogCard = ({ id, image, title, readTime, className = "" }) => {
                 style={{ backgroundColor: '#5B7C99' }}
             >
                 {/* Title */}
-                <h3 className="text-white font-medium text-h3 lg:text-h3-lg leading-snug mb-2 sm:mb-4">
+                <h3 className="text-white font-medium text-h3 lg:text-h3-lg leading-snug mb-2 sm:mb-4 font-merriweather">
                     {title}
-                </h3>
+                </h3>   
 
                 {/* Read More Button */}
                 <div className="flex justify-end">
@@ -36,7 +36,7 @@ const BlogCard = ({ id, image, title, readTime, className = "" }) => {
                         to={`/blog/${id}`}
                         className="flex items-center space-x-1 sm:space-x-2 text-white hover:text-gray-200 transition-colors"
                     >
-                        <span className="text-body lg:text-body-lg underline">Read more</span>
+                        <span className="text-body lg:text-body-lg underline font-source-sans">Read more</span>
                         <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>

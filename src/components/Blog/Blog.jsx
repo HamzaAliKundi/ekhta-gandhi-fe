@@ -48,12 +48,12 @@ const Blog = () => {
 
                 {/* Header Section */}
                 <div className="flex justify-between items-center mb-8 lg:mb-12">
-                    <h1 className="text-h1 lg:text-h1-lg font-normal text-gray-900 font-poppins">
+                    <h1 className="text-h1 lg:text-h1-lg font-normal text-gray-900 font-merriweather">
                         Blogs section
                     </h1>
 
                     {/* View More Button */}
-                    <button className="px-3 py-1.5 sm:px-4 sm:py-2 text-white rounded-full hover:opacity-90 transition-colors font-poppins text-small lg:text-small-lg font-normal flex items-center space-x-1.5 sm:space-x-2"
+                    <button className="px-3 py-1.5 sm:px-4 sm:py-2 text-white rounded-full hover:opacity-90 transition-colors font-source-sans text-small lg:text-small-lg font-normal flex items-center space-x-1.5 sm:space-x-2"
                         style={{ backgroundColor: '#5B7C99' }}>
                         <span>View more</span>
                         <div className="w-6 h-6 sm:w-8 sm:h-8 bg-white rounded-full flex items-center justify-center">

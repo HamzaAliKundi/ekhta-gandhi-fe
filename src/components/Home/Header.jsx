@@ -21,7 +21,22 @@ const HomePageHeader = () => {
                     <div className="w-full lg:w-[614px] flex flex-col gap-4 sm:gap-6 lg:gap-8 order-2 lg:order-1">
                         {/* Main Text */}
                         <div className="flex flex-col gap-3 lg:gap-8 text-center lg:text-left px-4 sm:px-0">
-                            <h1 className="font-outfit text-h1 lg:text-h1-lg leading-tight text-black tracking-none max-w-full lg:max-w-none">
+                            {/* 
+                            FONT OPTIONS FOR HEADER:
+                            
+                            Current (Outfit):   
+                            className="font-outfit text-h1 lg:text-h1-lg leading-tight text-black tracking-none max-w-full lg:max-w-none"
+                            
+                            Harvard Style (Canela Deck for headers):
+                            className="font-canela-deck text-h1 lg:text-h1-lg leading-tight text-black tracking-none max-w-full lg:max-w-none"
+                            
+                            Brown Style (Merriweather for headers):
+                            className="font-merriweather text-h1 lg:text-h1-lg leading-tight text-black tracking-none max-w-full lg:max-w-none"
+                            
+                            Alternative (Merriweather for headers):
+                            className="font-merriweather text-h1 lg:text-h1-lg leading-tight text-black tracking-none max-w-full lg:max-w-none"
+                            */}
+                            <h1 className="font-merriweather text-h1 lg:text-h1-lg leading-tight text-black tracking-none max-w-full lg:max-w-none">
                                 Smart College<span className="hidden lg:inline"><br /></span>
                                 Counselling<span className="hidden lg:inline"><br /></span>
                                 Powered by Real<span className="hidden lg:inline"><br /></span>
@@ -38,7 +53,22 @@ const HomePageHeader = () => {
                                 <div className="w-3 h-0.5 bg-[#5B7C99] rounded"></div>
                             </div>
                             
-                            <span className="text-[#5B7C99] font-outfit text-body lg:text-body-lg flex-1">
+                            {/* 
+                            FONT OPTIONS FOR SEARCH TEXT:
+                            
+                            Current (Outfit):
+                            className="text-[#5B7C99] font-outfit text-body lg:text-body-lg flex-1"
+                            
+                            Harvard Style (GT America for body):
+                            className="text-[#5B7C99] font-gt-america text-body lg:text-body-lg flex-1"
+                            
+                            Brown Style (Source Sans for body):
+                            className="text-[#5B7C99] font-source-sans text-body lg:text-body-lg flex-1"
+                            
+                            Alternative (Poppins for body):
+                            className="text-[#5B7C99] font-poppins text-body lg:text-body-lg flex-1"
+                            */}
+                            <span className="text-[#5B7C99] font-source-sans text-body lg:text-body-lg flex-1">
                                 Search
                             </span>
                             

@@ -29,7 +29,7 @@ const StudentFirstSection = () => {
                     {/* Left Section - Image and Title */}
                     <div className="w-full lg:w-1/2 flex flex-col gap-4 sm:gap-6 order-2 lg:order-1">
                         {/* Title */}
-                        <h2 className="font-outfit font-medium text-black text-h2 lg:text-h2-lg leading-tight lg:leading-[100%] tracking-[0%] text-center lg:text-left">
+                        <h2 className="font-merriweather font-medium text-black text-h2 lg:text-h2-lg leading-tight lg:leading-[100%] tracking-[0%] text-center lg:text-left">
                             Student first, Always
                         </h2>
                         
@@ -50,10 +50,10 @@ const StudentFirstSection = () => {
                                 key={index}
                                 className="bg-white rounded-[20px] p-3 sm:p-4 lg:p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 w-full max-w-[680px] flex-1 mx-auto lg:mx-0"
                             >
-                                <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-black mb-2 font-outfit">
+                                <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-black mb-2 font-merriweather">
                                     {feature.title}
                                 </h3>
-                                <p className="text-gray-700 text-xs sm:text-sm lg:text-base leading-relaxed font-outfit">
+                                <p className="text-gray-700 text-xs sm:text-sm lg:text-base leading-relaxed font-source-sans">
                                     {feature.description}
                                 </p>
                             </div>

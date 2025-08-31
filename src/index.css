@@ -3,12 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom font family classes */
+/* Current Font Classes */
 .font-outfit {
   font-family: 'Outfit', sans-serif;
 }
@@ -29,9 +31,68 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-/* Global font family override */
+/* New Font Classes */
+.font-merriweather {
+  font-family: 'Merriweather', serif;
+}
+
+.font-roboto-condensed {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Harvard-style Font Combination */
+.font-canela-deck {
+  font-family: 'Georgia', 'Times New Roman', serif; /* Fallback for Canela Deck Web */
+}
+
+.font-gt-america {
+  font-family: 'Inter', 'Arial', sans-serif; /* Fallback for GT America Standard */
+}
+
+/* Brown University Style (they use Source Sans Pro + Merriweather) */
+.font-source-sans {
+  font-family: 'Inter', 'Arial', sans-serif; /* Fallback for Source Sans Pro */
+}
+
+/* Global font family override - BROWN STYLE */
 body {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Inter', 'Arial', sans-serif; /* Source Sans fallback */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif; /* Merriweather for all headers */
+}
+
+/* Font Sample Section - Remove this after choosing */
+.font-samples {
+  padding: 20px;
+  margin: 20px 0;
+  border: 2px solid #5B7C99;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
+
+.font-samples h2 {
+  color: #5B7C99;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.font-samples .sample {
+  margin: 15px 0;
+  padding: 10px;
+  border-left: 4px solid #5B7C99;
+  background: white;
+}
+
+.font-samples .sample h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.font-samples .sample p {
+  margin: 5px 0;
+  line-height: 1.6;
 }
 
 /* Responsive Typography Utilities */

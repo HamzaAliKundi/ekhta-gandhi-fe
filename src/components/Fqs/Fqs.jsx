@@ -78,7 +78,7 @@ const Fqs = () => {
         <div className="mb-16 lg:mb-24">
           {/* FAQ Header */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 lg:mb-12">
-            <h1 className="text-h1 lg:text-h1-lg font-normal text-black mb-4 sm:mb-0">
+            <h1 className="text-h1 lg:text-h1-lg font-normal text-black mb-4 sm:mb-0 font-merriweather">
               Frequently asked questions
             </h1>
             <button className="flex items-center gap-2 text-white px-6 py-2 rounded-full text-small lg:text-small-lg font-medium hover:opacity-90 transition-opacity self-start sm:self-auto"
@@ -96,7 +96,7 @@ const Fqs = () => {
                   onClick={() => toggleFaq(index)}
                   className="w-full flex items-center justify-between py-4 text-left hover:text-gray-700 transition-colors"
                 >
-                  <h3 className="text-h3 lg:text-h3-lg font-medium text-black pr-4">
+                  <h3 className="text-h3 lg:text-h3-lg font-medium text-black pr-4 font-merriweather">
                     {faq.question}
                   </h3>
                   <div className="flex-shrink-0">
@@ -110,7 +110,7 @@ const Fqs = () => {
                 
                 {openFaq === index && (
                   <div className="pb-4 pr-8">
-                    <p className="text-gray-600 text-body lg:text-body-lg leading-relaxed whitespace-pre-line">
+                    <p className="text-gray-600 text-body lg:text-body-lg leading-relaxed whitespace-pre-line font-source-sans">
                       {faq.answer}
                     </p>
                   </div>
@@ -124,7 +124,7 @@ const Fqs = () => {
         <div>
           {/* Blogs Header */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 lg:mb-12">
-            <h2 className="text-h2 lg:text-h2-lg font-normal text-black mb-4 sm:mb-0">
+            <h2 className="text-h2 lg:text-h2-lg font-normal text-black mb-4 sm:mb-0 font-merriweather">
               Blogs section
             </h2>
             <button className="flex items-center gap-2 text-white px-6 py-2 rounded-full text-small lg:text-small-lg font-medium hover:opacity-90 transition-opacity self-start sm:self-auto"
@@ -155,7 +155,7 @@ const Fqs = () => {
                   {/* Title and Read More in Bottom Container */}
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <div className="flex items-end justify-between">
-                      <h3 className="text-white text-h3 lg:text-h3-lg font-semibold leading-tight flex-1 mr-4">
+                      <h3 className="text-white text-h3 lg:text-h3-lg font-semibold leading-tight flex-1 mr-4 font-merriweather">
                         {blog.title}
                       </h3>
                       <button className="text-white text-small lg:text-small-lg flex items-center gap-1 opacity-90 hover:opacity-100 transition-all duration-200 hover:transform hover:translate-x-1 whitespace-nowrap">

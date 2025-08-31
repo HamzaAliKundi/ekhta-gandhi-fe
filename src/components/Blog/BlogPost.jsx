@@ -96,17 +96,17 @@ const BlogPost = () => {
             {/* Content Section - Single Column, Centered */}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
                 {/* Title */}
-                <h1 className="text-h1 lg:text-h1-lg font-bold text-black mb-4 sm:mb-6 leading-tight">
+                <h1 className="text-h1 lg:text-h1-lg font-bold text-black mb-4 sm:mb-6 leading-tight font-merriweather">
                     When Should You Start Preparing?
                 </h1>
 
                 {/* Intro Paragraph */}
-                <p className="text-black text-body lg:text-body-lg mb-4 sm:mb-6 leading-relaxed">
+                <p className="text-black text-body lg:text-body-lg mb-4 sm:mb-6 leading-relaxed font-source-sans">
                     Applying to college is one of the most important — and stressful — parts of high school, but applying too late doesn't have to be. Here's what to know about timing your college applications and when to start preparing for the college application process.
                 </p>
 
                 {/* Sub-heading */}
-                <h2 className="text-h2 lg:text-h2-lg font-bold text-black mb-6 sm:mb-8">
+                <h2 className="text-h2 lg:text-h2-lg font-bold text-black mb-6 sm:mb-8 font-merriweather">
                     Here are the top 10 college application mistakes — and how you can avoid them.
                 </h2>
 
@@ -160,9 +160,9 @@ const BlogPost = () => {
                 <div className="space-y-8">
                     {/* Point 1 */}
                     <div>
-                        <h3 className="text-h3 lg:text-h3-lg font-bold text-black mb-2 sm:mb-3">1. Starting Too Late</h3>
-                        <p className="text-black text-body lg:text-body-lg mb-2"><strong>Mistake:</strong> Many students underestimate how long college applications take.</p>
-                        <p className="text-black text-body lg:text-body-lg"><strong>Fix:</strong> Counselors suggest and admissions experts recommend starting applications the summer before senior year. This gives you time to craft thoughtful essays, gather recommendation letters, and complete all requirements without rushing.</p>
+                        <h3 className="text-h3 lg:text-h3-lg font-bold text-black mb-2 sm:mb-3 font-merriweather">1. Starting Too Late</h3>
+                        <p className="text-black text-body lg:text-body-lg mb-2 font-source-sans"><strong>Mistake:</strong> Many students underestimate how long college applications take.</p>
+                        <p className="text-black text-body lg:text-body-lg font-source-sans"><strong>Fix:</strong> Counselors suggest and admissions experts recommend starting applications the summer before senior year. This gives you time to craft thoughtful essays, gather recommendation letters, and complete all requirements without rushing.</p>
                     </div>
 
                     {/* Point 2 */}

@@ -10,6 +10,7 @@ import FqsPage from "./pages/Fqs";
 import ContactPage from "./pages/Contact";
 import BlogPage from "./pages/Blog";
 import BlogPostPage from "./components/Blog/BlogPost";
+import FontSamples from "./components/FontSamples";
 
 const AppRoutes = () => {
   return (
@@ -26,6 +27,7 @@ const AppRoutes = () => {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:id" element={<BlogPostPage />} />
+        <Route path="/font-samples" element={<FontSamples />} />
       </Routes>
       <Footer />
     </>
