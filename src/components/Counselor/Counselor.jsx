@@ -128,13 +128,6 @@ const Counselor = () => {
               </select>
             </div>
           </div>
-
-          {/* Counselor Count */}
-          <div className="w-full">
-            <p className="font-merriweather font-normal text-h3 lg:text-h3-lg leading-tight text-black">
-              35 Counselors for this subject are available here
-            </p>
-          </div>
         </div>
 
         {/* Counselor Cards */}

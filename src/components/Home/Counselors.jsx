@@ -24,7 +24,7 @@ const HomePageCounselors = () => {
 
   return (
     <div className="w-full flex justify-center min-h-[450px] bg-[#EEF5FF] py-8">
-      <div className="w-full max-w-7xl px-4 py-8 md:py-16">
+      <div className="w-full max-w-5xl px-2 py-4 md:py-8">
         {/* Title */}
         <h2 className="font-merriweather font-normal text-black mb-8 md:mb-12 text-h2 lg:text-h2-lg leading-[100%] tracking-[-0.02em] text-center md:text-left">
           Explore counselors
