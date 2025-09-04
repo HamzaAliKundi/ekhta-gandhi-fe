@@ -24,7 +24,6 @@ const HomePageSteps = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Title */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-h2 lg:text-h2-lg font-normal text-black font-merriweather leading-tight px-4">
             Get started in 3 simple steps
           </h2>
         </div>
@@ -43,9 +42,9 @@ const HomePageSteps = () => {
             <div 
               key={index}
               className="bg-white rounded-3xl flex flex-col 
-             w-full max-w-[220px] sm:max-w-[260px] lg:max-w-[300px] 
-             h-[160px] sm:h-[200px] lg:h-[220px] 
-             p-3 sm:p-4 shadow-lg"
+              w-full max-w-[190px] sm:max-w-[220px] lg:max-w-[260px] 
+              h-[160px] sm:h-[180px] lg:h-[200px] 
+              p-3 sm:p-4 shadow-lg"
             >
               {/* Badge */}
               <div className="inline-flex items-center justify-center text-white text-xs font-medium rounded-full mb-4 sm:mb-6 self-start bg-[#5B7C99] px-3 py-1.5 w-[70px] h-[26px]">
@@ -53,9 +52,13 @@ const HomePageSteps = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-black font-merriweather font-normal leading-tight mb-4 sm:mb-6 text-h3 lg:text-h3-lg">
-                {step.title}
+              {/*Komal*/}
+              <h3 className="text-black font-merriweather font-normal leading-tight mb-4 sm:mb-6 text-base sm:text-lg lg:text-xl">
+               {step.title}
               </h3>
+              {/*<h3 className="text-black font-merriweather font-normal leading-tight mb-4 sm:mb-6 text-h3 lg:text-h3-lg">
+                {step.title}
+              </h3>*/}
 
               {/* Icon Container */}
               <div className="flex-1 flex items-center justify-center min-h-0">
