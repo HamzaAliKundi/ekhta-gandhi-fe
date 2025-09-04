@@ -30,11 +30,22 @@ const HomePageSteps = () => {
         </div>
 
         {/* Steps Container */}
-        <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-10 justify-center items-center">
+        {/*<div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-10 justify-center items-center">*/}
+          {/*Kvora change*/}
+          <div className="flex flex-col lg:flex-row gap-10 sm:gap-12 lg:gap-16 justify-center items-center">
+          
           {steps.map((step, index) => (
-            <div 
+            /*<div 
               key={index}
               className="bg-white rounded-3xl flex flex-col w-full max-w-[240px] sm:max-w-[280px] lg:max-w-[320px] h-[200px] sm:h-[240px] lg:h-[280px] p-4 sm:p-6 shadow-lg"
+            >*/
+            /* Komal*/
+            <div 
+              key={index}
+              className="bg-white rounded-3xl flex flex-col 
+             w-full max-w-[220px] sm:max-w-[260px] lg:max-w-[300px] 
+             h-[160px] sm:h-[200px] lg:h-[220px] 
+             p-3 sm:p-4 shadow-lg"
             >
               {/* Badge */}
               <div className="inline-flex items-center justify-center text-white text-xs font-medium rounded-full mb-4 sm:mb-6 self-start bg-[#5B7C99] px-3 py-1.5 w-[70px] h-[26px]">
@@ -51,7 +62,8 @@ const HomePageSteps = () => {
                 <img 
                   src={step.icon} 
                   alt={step.title}
-                  className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 object-contain"
+                  /*className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 object-contain"*/
+                  className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 object-contain"
                 />
               </div>
             </div>
