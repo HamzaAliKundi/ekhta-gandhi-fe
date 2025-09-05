@@ -53,7 +53,7 @@ const HomePageCounselors = () => {
                 </h3>
                 
                 {/* Star Rating - Reduced gap between stars */}
-                <div className="flex gap-0.5 mb-3">
+                {/*<div className="flex gap-0.5 mb-3">
                   {[...Array(counselor.rating)].map((_, i) => (
                     <div 
                       key={i}
@@ -62,16 +62,33 @@ const HomePageCounselors = () => {
                       ★
                     </div>
                   ))}
-                </div>
+                </div>*/}
+                {/* Star Rating - smaller stars */}
+                    <div className="flex gap-0.1 mb-3">
+                      {[...Array(counselor.rating)].map((_, i) => (
+                      <div 
+                        key={i}
+                        className="text-orange-400 text-xs sm:text-sm"
+                      >
+                      ★
+                 </div>
+  ))}
+</div>
               </div>
 
               {/* Description - Positioned closer to stars with reduced gap */}
-              <div className="absolute top-28 md:top-24 left-6 right-6 bottom-14 z-10 overflow-hidden">
+              {/*<div className="absolute top-28 md:top-24 left-6 right-6 bottom-14 z-10 overflow-hidden">
                 <p className="font-source-sans font-normal text-black text-body lg:text-body-lg leading-relaxed tracking-[0%] line-clamp-4">
                   {counselor.description}
                 </p>
+              </div>*/}
+              <div className="absolute top-28 md:top-24 left-6 right-6 bottom-14 z-10 overflow-hidden">
+                <p className="font-source-sans font-normal text-black 
+                text-xs sm:text-sm 
+                leading-relaxed tracking-[0%] line-clamp-4">
+                  {counselor.description}
+                </p>
               </div>
-
               {/* Learn More Link */}
               <div className="absolute bottom-4 right-6 z-10">
                                   <a 

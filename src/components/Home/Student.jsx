@@ -50,11 +50,17 @@ const StudentFirstSection = () => {
                                 key={index}
                                 className="bg-white rounded-[20px] p-3 sm:p-4 lg:p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 w-full max-w-[680px] flex-1 mx-auto lg:mx-0"
                             >
-                                <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-black mb-2 font-merriweather">
+                                {/*<h3 className="text-base sm:text-lg lg:text-xl font-semibold text-black mb-2 font-merriweather">
                                     {feature.title}
                                 </h3>
                                 <p className="text-gray-700 text-xs sm:text-sm lg:text-base leading-relaxed font-source-sans">
                                     {feature.description}
+                                </p>*/}
+                                <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-black mb-2 font-merriweather">
+                                  {feature.title}
+                                </h3>
+                                <p className="text-gray-700 text-[10px] sm:text-xs lg:text-sm leading-relaxed font-source-sans">
+                                 {feature.description}
                                 </p>
                             </div>
                         ))}

@@ -18,7 +18,9 @@ const HomePageHeader = () => {
                     </div>
 
                     {/* Left Section - Text and Search */}
-                    <div className="w-full lg:w-[614px] flex flex-col gap-4 sm:gap-6 lg:gap-8 order-2 lg:order-1">
+                    {/*<div className="w-full lg:w-[614px] flex flex-col gap-4 sm:gap-6 lg:gap-8 order-2 lg:order-1">*/}
+                      <div className="w-full lg:w-[800px] flex flex-col gap-4 sm:gap-6 lg:gap-8 order-2 lg:order-1">
+
                         {/* Main Text */}
                         <div className="flex flex-col gap-3 lg:gap-8 text-center lg:text-left px-4 sm:px-0">
                             {/* 
@@ -36,12 +38,24 @@ const HomePageHeader = () => {
                             Alternative (Merriweather for headers):
                             className="font-merriweather text-h1 lg:text-h1-lg leading-tight text-black tracking-none max-w-full lg:max-w-none"
                             */}
-                            <h1 className="font-merriweather text-h1 lg:text-h1-lg leading-tight text-black tracking-none max-w-full lg:max-w-none">
-                                Smart College<span className="hidden lg:inline"><br /></span>
-                                Counselling<span className="hidden lg:inline"><br /></span>
-                                Powered by Real<span className="hidden lg:inline"><br /></span>
-                                Experience
-                            </h1>
+                            {/*<h1 className="font-merriweather text-h1 lg:text-h1-lg leading-tight text-black tracking-none max-w-full lg:max-w-none"> 
+                                Smart College <span className="hidden lg:inline"><br /></span> 
+                                Counselling<span className="hidden lg:inline"><br /></span> 
+                                Powered by Real<span className="hidden lg:inline"><br /></span> 
+                                Experience </h1>*/}
+                                <h1 className="font-merriweather text-h1 lg:text-h1-lg leading-snug text-black tracking-none w-full">
+                                    Smart College Counselling
+                                <br />
+                                    Powered by Real Experience
+                                </h1>
+
+
+                                <p className="mt-4 font-source-sans text-base sm:text-lg lg:text-xl leading-relaxed text-gray-700 text-center max-w-2xl mx-auto">
+                                From applications to admissions,
+                                <br />
+                                we simplify every step of your college journey.
+                                </p>
+                            
                         </div>
 
                         {/* Search Bar */}
