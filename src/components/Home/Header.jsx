@@ -2,60 +2,35 @@ import React from 'react';
 
 const HomePageHeader = () => {
     return (
-        <div className="w-full bg-blue-50 flex justify-center">
-            <div className="w-full max-w-[1440px] bg-blue-50 relative overflow-hidden lg:min-h-[600px]">
+        <div className="w-full bg-blue-50 flex justify-center pt-20">
+            <div className="w-full max-w-[1440px] bg-blue-50 relative overflow-hidden lg:min-h-[500px]">
 
                 {/* Main container */}
-                <div className="w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between px-4 sm:px-6 lg:px-8 py-2 sm:py-4 lg:py-8 relative z-10 gap-4 lg:gap-0">
+                <div className="w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between px-4 sm:px-6 lg:px-8 py-2 sm:py-4 lg:py-8 relative z-10 gap-4 lg:gap-2">
                     
                     {/* Right Section - Image (Mobile First) */}
-                    <div className="w-full lg:flex-1 flex justify-center lg:justify-end items-center order-1 lg:order-2 lg:pr-0">
+                    <div className="w-full md:pr-20 lg:pr-20 lg:flex-1 flex justify-center lg:justify-end items-center order-1 lg:order-2 lg:pr-0">
                         <img 
                             src="/Home/header.svg" 
                             alt="Woman working at desk" 
-                            className="w-full max-w-[280px] sm:max-w-[350px] md:max-w-[450px] lg:max-w-none lg:w-[750px] lg:h-[550px] h-auto object-contain lg:translate-x-16"
+                            className="w-full max-w-[250px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-none lg:w-[600px] lg:h-[400px] h-auto object-contain lg:translate-x-8"
                         />
                     </div>
 
                     {/* Left Section - Text and Search */}
-                    {/*<div className="w-full lg:w-[614px] flex flex-col gap-4 sm:gap-6 lg:gap-8 order-2 lg:order-1">*/}
-                      <div className="w-full lg:w-[800px] flex flex-col gap-4 sm:gap-6 lg:gap-8 order-2 lg:order-1">
+                    <div className="w-full lg:w-[600px] flex flex-col md:pl-20 lg:pl-20 gap-4 sm:gap-6 lg:gap-8 order-2 lg:order-1">
 
                         {/* Main Text */}
-                        <div className="flex flex-col gap-3 lg:gap-8 text-center lg:text-left px-4 sm:px-0">
-                            {/* 
-                            FONT OPTIONS FOR HEADER:
-                            
-                            Current (Outfit):   
-                            className="font-outfit text-h1 lg:text-h1-lg leading-tight text-black tracking-none max-w-full lg:max-w-none"
-                            
-                            Harvard Style (Canela Deck for headers):
-                            className="font-canela-deck text-h1 lg:text-h1-lg leading-tight text-black tracking-none max-w-full lg:max-w-none"
-                            
-                            Brown Style (Merriweather for headers):
-                            className="font-merriweather text-h1 lg:text-h1-lg leading-tight text-black tracking-none max-w-full lg:max-w-none"
-                            
-                            Alternative (Merriweather for headers):
-                            className="font-merriweather text-h1 lg:text-h1-lg leading-tight text-black tracking-none max-w-full lg:max-w-none"
-                            */}
-                            {/*<h1 className="font-merriweather text-h1 lg:text-h1-lg leading-tight text-black tracking-none max-w-full lg:max-w-none"> 
-                                Smart College <span className="hidden lg:inline"><br /></span> 
-                                Counselling<span className="hidden lg:inline"><br /></span> 
-                                Powered by Real<span className="hidden lg:inline"><br /></span> 
-                                Experience </h1>*/}
-                                <h1 className="font-merriweather text-h1 lg:text-h1-lg leading-snug text-black tracking-none w-full">
-                                    Smart College Counselling
-                                <br />
-                                    Powered by Real Experience
-                                </h1>
+                        <div className="flex flex-col gap-3 lg:gap-6 text-center lg:text-left px-4 sm:px-0">
+                            <h1 className="font-merriweather text-3xl sm:text-4xl lg:text-4xl leading-snug text-black tracking-none w-full">
+                                Smart College Counselling Powered by Real Experience
+                            </h1>
 
-
-                                <p className="mt-4 font-source-sans text-base sm:text-lg lg:text-xl leading-relaxed text-gray-700 text-center max-w-2xl mx-auto">
+                            <p className="font-source-sans text-base sm:text-lg lg:text-xl leading-relaxed text-gray-700 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
                                 From applications to admissions,
                                 <br />
                                 we simplify every step of your college journey.
-                                </p>
-                            
+                            </p>
                         </div>
 
                         {/* Search Bar */}
@@ -67,21 +42,6 @@ const HomePageHeader = () => {
                                 <div className="w-3 h-0.5 bg-[#5B7C99] rounded"></div>
                             </div>
                             
-                            {/* 
-                            FONT OPTIONS FOR SEARCH TEXT:
-                            
-                            Current (Outfit):
-                            className="text-[#5B7C99] font-outfit text-body lg:text-body-lg flex-1"
-                            
-                            Harvard Style (GT America for body):
-                            className="text-[#5B7C99] font-gt-america text-body lg:text-body-lg flex-1"
-                            
-                            Brown Style (Source Sans for body):
-                            className="text-[#5B7C99] font-source-sans text-body lg:text-body-lg flex-1"
-                            
-                            Alternative (Poppins for body):
-                            className="text-[#5B7C99] font-poppins text-body lg:text-body-lg flex-1"
-                            */}
                             <span className="text-[#5B7C99] font-source-sans text-body lg:text-body-lg flex-1">
                                 Search
                             </span>

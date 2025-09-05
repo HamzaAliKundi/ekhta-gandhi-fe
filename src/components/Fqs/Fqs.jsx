@@ -72,45 +72,45 @@ const Fqs = () => {
 
   return (
     <div className="w-full bg-white min-h-screen">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
         
         {/* FAQ Section */}
-        <div className="mb-16 lg:mb-24">
+        <div className="mb-12 lg:mb-16">
           {/* FAQ Header */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 lg:mb-12">
-            <h1 className="text-h1 lg:text-h1-lg font-normal text-black mb-4 sm:mb-0 font-merriweather">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 lg:mb-8">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-black mb-3 sm:mb-0">
               Frequently asked questions
             </h1>
-            <button className="flex items-center gap-2 text-white px-6 py-2 rounded-full text-small lg:text-small-lg font-medium hover:opacity-90 transition-opacity self-start sm:self-auto"
+            <button className="flex items-center gap-2 text-white px-5 py-2 rounded-full text-sm lg:text-base font-medium hover:opacity-90 transition-opacity self-start sm:self-auto"
               style={{ backgroundColor: '#5B7C99' }}>
               View more
-              <ArrowRight size={16} />
+              <ArrowRight size={14} />
             </button>
           </div>
 
           {/* FAQ Items */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             {faqData.map((faq, index) => (
-              <div key={index} className="border-b border-gray-200 pb-4">
+              <div key={index} className="border-b border-gray-200 pb-3">
                 <button
                   onClick={() => toggleFaq(index)}
-                  className="w-full flex items-center justify-between py-4 text-left hover:text-gray-700 transition-colors"
+                  className="w-full flex items-center justify-between py-3 text-left hover:text-gray-700 transition-colors"
                 >
-                  <h3 className="text-h3 lg:text-h3-lg font-medium text-black pr-4 font-merriweather">
+                  <h3 className="text-lg sm:text-xl lg:text-xl font-medium text-black pr-4">
                     {faq.question}
                   </h3>
                   <div className="flex-shrink-0">
                     {openFaq === index ? (
-                      <ChevronDown size={20} className="text-gray-600" />
+                      <ChevronDown size={18} className="text-gray-600" />
                     ) : (
-                      <ChevronRight size={20} className="text-gray-600" />
+                      <ChevronRight size={18} className="text-gray-600" />
                     )}
                   </div>
                 </button>
                 
                 {openFaq === index && (
-                  <div className="pb-4 pr-8">
-                    <p className="text-gray-600 text-body lg:text-body-lg leading-relaxed whitespace-pre-line font-source-sans">
+                  <div className="pb-3 pr-6">
+                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                       {faq.answer}
                     </p>
                   </div>
@@ -123,23 +123,23 @@ const Fqs = () => {
         {/* Blogs Section */}
         <div>
           {/* Blogs Header */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 lg:mb-12">
-            <h2 className="text-h2 lg:text-h2-lg font-normal text-black mb-4 sm:mb-0 font-merriweather">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 lg:mb-8">
+            <h2 className="text-2xl sm:text-3xl lg:text-3xl font-normal text-black mb-3 sm:mb-0">
               Blogs section
             </h2>
-            <button className="flex items-center gap-2 text-white px-6 py-2 rounded-full text-small lg:text-small-lg font-medium hover:opacity-90 transition-opacity self-start sm:self-auto"
+            <button className="flex items-center gap-2 text-white px-5 py-2 rounded-full text-sm lg:text-base font-medium hover:opacity-90 transition-opacity self-start sm:self-auto"
               style={{ backgroundColor: '#5B7C99' }}>
               View more
-              <ArrowRight size={16} />
+              <ArrowRight size={14} />
             </button>
           </div>
 
           {/* Blog Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
             {blogData.map((blog) => (
               <div key={blog.id} className="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer">
                 {/* Blog Image with Overlay */}
-                <div className="relative h-64 lg:h-80 overflow-hidden">
+                <div className="relative h-56 lg:h-64 overflow-hidden">
                   <img
                     src={blog.image}
                     alt={blog.title}
@@ -153,14 +153,14 @@ const Fqs = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                   
                   {/* Title and Read More in Bottom Container */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-5">
                     <div className="flex items-end justify-between">
-                      <h3 className="text-white text-h3 lg:text-h3-lg font-semibold leading-tight flex-1 mr-4 font-merriweather">
+                      <h3 className="text-white text-base sm:text-lg lg:text-lg font-semibold leading-tight flex-1 mr-3">
                         {blog.title}
                       </h3>
-                      <button className="text-white text-small lg:text-small-lg flex items-center gap-1 opacity-90 hover:opacity-100 transition-all duration-200 hover:transform hover:translate-x-1 whitespace-nowrap">
+                      <button className="text-white text-xs sm:text-sm flex items-center gap-1 opacity-90 hover:opacity-100 transition-all duration-200 hover:transform hover:translate-x-1 whitespace-nowrap">
                         Read more
-                        <ArrowRight size={14} />
+                        <ArrowRight size={12} />
                       </button>
                     </div>
                   </div>

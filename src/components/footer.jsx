@@ -36,16 +36,16 @@ const Footer = () => {
 
     return (
         <footer className="max-w-[1680px] mx-auto bg-[#6B8CAE] text-white">
-            <div className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+            <div className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
                 {/* Main Footer Content */}
-                <div className="flex flex-col gap-8 lg:gap-12">
+                <div className="flex flex-col gap-6 lg:gap-8">
 
                     {/* Main Row - Logo, Pages, Resources, Legal, Contact */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap- lg:gap-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
 
                         {/* Logo and Description */}
                         <div className="lg:col-span-1 max-w-[200px]">
-                            <div className="mb-6">
+                            <div className="mb-4">
                                 <h2 className="text-h1 lg:text-h1-lg font-bold font-merriweather">
                                     Logo
                                 </h2>   
@@ -57,7 +57,7 @@ const Footer = () => {
 
                         {/* Pages */}
                         <div className="max-w-[100px]">
-                            <h3 className="text-h3 lg:text-h3-lg font-semibold mb-4 lg:mb-6 font-merriweather">
+                            <h3 className="text-h3 lg:text-h3-lg font-semibold mb-3 lg:mb-4 font-merriweather">
                                 Pages
                             </h3>
                             <ul className="space-y-3">
@@ -86,7 +86,7 @@ const Footer = () => {
 
                         {/* Resources */}
                         <div className="max-w-[100px]">
-                            <h3 className="text-h3 lg:text-h3-lg font-semibold mb-4 lg:mb-6 font-merriweather">
+                            <h3 className="text-h3 lg:text-h3-lg font-semibold mb-3 lg:mb-4 font-merriweather">
                                 Resources
                             </h3>
                             <ul className="space-y-3">
@@ -115,7 +115,7 @@ const Footer = () => {
 
                         {/* Legal */}
                         <div className="max-w-[100px]">
-                            <h3 className="text-h3 lg:text-h3-lg font-semibold mb-4 lg:mb-6 font-merriweather">
+                            <h3 className="text-h3 lg:text-h3-lg font-semibold mb-3 lg:mb-4 font-merriweather">
                                 Legal
                             </h3>
                             <ul className="space-y-3">
@@ -164,10 +164,10 @@ const Footer = () => {
                 </div>
 
                 {/* Divider */}
-                <div className="border-t border-white/20 my-8 lg:my-12"></div>
+                <div className="border-t border-white/20 my-4 lg:my-6"></div>
 
                 {/* Social Media Icons */}
-                <div className="flex justify-center lg:justify-end space-x-6">
+                <div className="flex justify-center lg:justify-end space-x-6 pb-2">
                     <a
                         href="#"
                         className="text-white/80 hover:text-white transition-colors duration-200"
