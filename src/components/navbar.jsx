@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full max-w-[1680px] mx-auto h-[90px] bg-[#5B7C99] flex items-center left-0 z-50">
+    <nav className="w-full max-w-[1680px] mx-auto h-[90px] bg-[#5B7C99] flex items-center left-0 z-50 px-4 sm:px-8 md:px-12">
       <div className="max-w-[1440px] w-full mx-auto px-4 sm:px-8 md:px-[60px] py-2 sm:py-4 md:py-[8px] flex items-center justify-between gap-2 sm:gap-4 md:gap-[8px]">
         {/* Left: Logo */}
         <div className="w-[140px] sm:w-[160px] md:w-[180px] h-[40px] px-3 sm:px-5 md:px-[20px] py-2 sm:py-3 md:py-[10px] flex items-center gap-2 sm:gap-3 md:gap-[12px] rounded-[25px] bg-white border border-gray-200 shadow-sm">
@@ -27,17 +27,17 @@ const Navbar = () => {
         <div className="hidden md:flex items-center justify-center gap-[32px] w-[400px] h-[40px]">
           <Link 
             to="/counselor" 
-            className={`text-white hover:text-gray-100 transition-all duration-300 font-merriweather text-button lg:text-button-lg leading-none tracking-wide ${isActive('/counselor') ? 'text-gray-100' : 'text-white'}`}
+            className={`text-white hover:text-gray-100 transition-all duration-300 font-merriweather text-sm font-medium leading-none tracking-wide ${isActive('/counselor') ? 'text-gray-100' : 'text-white'}`}
             onClick={handleLinkClick}
           >
             Find Counselor
           </Link>
           <Link 
             to="/signup" 
-            className={`text-white hover:text-gray-100 transition-all duration-300 font-merriweather text-button lg:text-button-lg leading-none tracking-wide ${isActive('/become-counselor') ? 'text-gray-100' : 'text-white'}`}
+            className={`text-white hover:text-gray-100 transition-all duration-300 font-merriweather text-sm font-medium leading-none tracking-wide ${isActive('/become-counselor') ? 'text-gray-100' : 'text-white'}`}
             onClick={handleLinkClick}
           >
-            Become Counselor
+            Be a Counselor
           </Link>
         </div>
 
@@ -45,8 +45,8 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-[16px]">
           {/* Login dropdown */}
           <div className="relative group">
-            <button className="w-[140px] h-[44px] px-[24px] py-2 flex items-center justify-center gap-[8px] rounded-[22px] border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#5B7C99] transition-all duration-300 shadow-sm hover:shadow-md">
-              <span className="text-button lg:text-button-lg font-semibold font-merriweather tracking-wide">Login</span>
+            <button className="px-2 py-1 text-white hover:text-gray-200 transition-all duration-300 font-merriweather text-[15px] font-normal tracking-wide flex items-center gap-1">
+              <span>Login</span>
               <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -78,10 +78,9 @@ const Navbar = () => {
           {/* Sign up button */}
           <Link 
             to="/signup" 
-            className="w-[140px] h-[44px] px-[24px] py-2 flex items-center justify-center gap-[8px] rounded-[22px] border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#5B7C99] transition-all duration-300 shadow-sm hover:shadow-md group"
+            className="px-2 py-1 text-white hover:text-gray-200 transition-all duration-300 font-merriweather text-[15px] font-normal tracking-wide"
           >
-            <span className="text-[15px] font-semibold font-merriweather tracking-wide">Sign up</span>
-            <img src="/common/logout.svg" alt="Logout icon" className="w-4 h-4 group-hover:brightness-0" />
+            <span>Sign up</span>
           </Link>
         </div>
 
@@ -101,37 +100,50 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu dropdown */}
-      <div className={`md:hidden absolute top-[90px] left-0 w-full bg-[#5B7C99] shadow-lg z-50 transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 max-h-[500px]' : 'opacity-0 max-h-0 overflow-hidden'}`}>
-        <div className="flex flex-col items-center py-6 space-y-6 px-4">
-          <Link to="/counselor" className="text-white hover:text-gray-100 transition-all duration-300 font-merriweather font-semibold text-[15px] leading-none tracking-wide" onClick={handleLinkClick}>Find Counselor</Link>
-          <Link to="/signup" className="text-white hover:text-gray-100 transition-all duration-300 font-merriweather font-semibold text-[15px] leading-none tracking-wide" onClick={handleLinkClick}>Become Counselor</Link>
+      <div className={`md:hidden absolute top-[90px] left-0 w-full bg-[#5B7C99] shadow-xl border-t border-white/10 z-50 transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 max-h-[500px]' : 'opacity-0 max-h-0 overflow-hidden'}`}>
+        <div className="flex flex-col py-6 px-4">
+          {/* Navigation Links */}
+          <div className="flex flex-col space-y-1 mb-6">
+            <Link 
+              to="/counselor" 
+              className="px-4 py-3 text-white hover:text-gray-100 hover:bg-white/10 transition-all duration-300 font-merriweather font-normal text-base rounded-lg" 
+              onClick={handleLinkClick}
+            >
+              Find Counselor
+            </Link>
+            <Link 
+              to="/signup" 
+              className="px-4 py-3 text-white hover:text-gray-100 hover:bg-white/10 transition-all duration-300 font-merriweather font-normal text-base rounded-lg" 
+              onClick={handleLinkClick}
+            >
+              Be a Counselor
+            </Link>
+          </div>
+          
+          {/* Divider */}
+          <div className="border-t border-white/20 mb-6"></div>
           
           {/* Mobile Login options */}
-          <div className="w-full max-w-[280px] space-y-4">
+          <div className="flex flex-col space-y-2">
             <a 
               href="https://ekhta-gandhi-user.vercel.app/login" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-full h-[44px] px-[24px] py-2 flex items-center justify-center gap-[8px] rounded-[22px] border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#5B7C99] transition-all duration-300 shadow-sm hover:shadow-md"
+              className="px-4 py-3 text-white hover:text-gray-100 hover:bg-white/10 transition-all duration-300 font-merriweather font-normal text-base rounded-lg"
               onClick={handleLinkClick}
             >
-              <span className="text-[15px] font-semibold font-merriweather tracking-wide">Login as Student</span>
+              Login as Student
             </a>
             <a 
               href="https://ekhta-gandhi-counselor.vercel.app/login" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-full h-[44px] px-[24px] py-2 flex items-center justify-center gap-[8px] rounded-[22px] border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#5B7C99] transition-all duration-300 shadow-sm hover:shadow-md"
+              className="px-4 py-3 text-white hover:text-gray-100 hover:bg-white/10 transition-all duration-300 font-merriweather font-normal text-base rounded-lg"
               onClick={handleLinkClick}
             >
-              <span className="text-[15px] font-semibold font-merriweather tracking-wide">Login as Counsellor</span>
+              Login as Counsellor
             </a>
           </div>
-          
-                     <Link to="/signup" className="w-full max-w-[280px] h-[44px] px-[24px] py-2 flex items-center justify-center gap-[8px] rounded-[22px] border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#5B7C99] transition-all duration-300 shadow-sm hover:shadow-md group" onClick={handleLinkClick}>
-             <span className="text-button lg:text-button-lg font-semibold font-merriweather tracking-wide">Sign up</span>
-            <img src="/common/logout.svg" alt="Logout icon" className="w-4 h-4 group-hover:brightness-0 group-hover:invert group-hover:hue-rotate-[200deg] group-hover:saturate-[2]" />
-          </Link>
         </div>
       </div>
     </nav>
