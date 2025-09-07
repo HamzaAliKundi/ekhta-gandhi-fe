@@ -56,11 +56,11 @@
 
 /* Global font family override - BROWN STYLE */
 body {
-  font-family: 'Inter', 'Arial', sans-serif; /* Source Sans fallback */
+  font-family: 'Poppins', sans-serif; /* Body text uses Poppins */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Merriweather', serif; /* Merriweather for all headers */
+  font-family: 'Roboto Condensed', serif; /* Roboto for all headers */
 }
 
 /* Font Sample Section - Remove this after choosing */

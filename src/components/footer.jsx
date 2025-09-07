@@ -10,13 +10,13 @@ const Footer = () => {
             { name: 'Our Services', href: '#' }
         ],
         resources: [
-            { name: 'Faqs', href: '/fqs' },
+            { name: 'FAQs', href: '/fqs' },
             { name: 'Counselor', href: '/counselor' },
             { name: 'Blog', href: '/blog' }
         ],
         legal: [
             { name: 'Privacy Policy', href: '#' },
-            { name: 'Terms of Conditions', href: '#' },
+            { name: 'Terms & Conditions', href: '#' },
             { name: 'Help Center', href: '#' },
             { name: 'Security and Compliance', href: '#' }
         ]
@@ -25,7 +25,7 @@ const Footer = () => {
     const contactInfo = {
         address: '21 3 12312 asd 123123132 asdf asdf 12a sfd',
         phone: '0000-00-00',
-        email: 'admin@.com'
+        email: 'ekeducation25@gmail.com'
     };
 
     const XIcon = () => (

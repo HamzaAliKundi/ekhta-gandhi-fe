@@ -1,126 +1,132 @@
 import React from 'react';
-import { Search, MessageCircle, Calendar, Star, ChevronDown } from 'lucide-react';
+import { Search, MessageCircle, Calendar, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Counselor = () => {
+  // Sample counselor data
   const counselors = [
     {
       id: 1,
       name: "Sarah Thompson",
       image: "/Home/user-2.svg",
       rating: 5,
-      description: "Hi there! I'm Sarah Thompson, a certified German language teacher with over 10 years of experience. I've successfully helped hundreds of students master German through engaging and personalized lessons.",
+      description:
+        "Hi there! I'm Sarah Thompson, a certified German language teacher with over 10 years of experience. I've successfully helped hundreds of students master German through engaging and personalized lessons.",
       hourlyRate: "$25/hour",
-      isOnline: true
+      isOnline: true,
     },
     {
       id: 2,
       name: "Michael Chen",
       image: "/Home/user-2.svg",
       rating: 5,
-      description: "Hello! I'm Michael Chen, a mathematics tutor specializing in calculus and algebra. With 8 years of teaching experience, I help students build confidence in math through clear explanations.",
+      description:
+        "Hello! I'm Michael Chen, a mathematics tutor specializing in calculus and algebra. With 8 years of teaching experience, I help students build confidence in math through clear explanations.",
       hourlyRate: "$30/hour",
-      isOnline: true
+      isOnline: true,
     },
     {
       id: 3,
       name: "Dr. Emily Rodriguez",
       image: "/Home/user-2.svg",
       rating: 4,
-      description: "Greetings! I'm Dr. Emily Rodriguez, a science educator with expertise in biology and chemistry. I've been teaching for 12 years and love making complex concepts accessible to all students.",
+      description:
+        "Greetings! I'm Dr. Emily Rodriguez, a science educator with expertise in biology and chemistry. I've been teaching for 12 years and love making complex concepts accessible to all students.",
       hourlyRate: "$35/hour",
-      isOnline: false
+      isOnline: false,
     },
     {
       id: 4,
       name: "James Wilson",
       image: "/Home/user-2.svg",
       rating: 5,
-      description: "Hi! I'm James Wilson, an English literature and writing instructor. With 15 years of experience, I help students develop strong writing skills and critical thinking abilities.",
+      description:
+        "Hi! I'm James Wilson, an English literature and writing instructor. With 15 years of experience, I help students develop strong writing skills and critical thinking abilities.",
       hourlyRate: "$28/hour",
-      isOnline: true
+      isOnline: true,
     },
     {
       id: 5,
       name: "Dr. Maria Gonzalez",
       image: "/Home/user-2.svg",
       rating: 5,
-      description: "Hello! I'm Dr. Maria Gonzalez, a Spanish language and culture expert. I've taught Spanish to learners of all ages for over 20 years, focusing on conversational fluency.",
+      description:
+        "Hello! I'm Dr. Maria Gonzalez, a Spanish language and culture expert. I've taught Spanish to learners of all ages for over 20 years, focusing on conversational fluency.",
       hourlyRate: "$32/hour",
-      isOnline: true
-    }
+      isOnline: true,
+    },
   ];
 
-  const renderStars = (rating) => {
-    return Array.from({ length: 5 }, (_, index) => (
+  // Function to render star ratings
+  const renderStars = (rating) =>
+    Array.from({ length: 5 }, (_, index) => (
       <Star
         key={index}
-        size={20}
-        className={`${index < rating ? 'text-orange-400 fill-current' : 'text-gray-300'}`}
+        size={12} // smaller stars
+        className={`${
+          index < rating ? 'text-orange-400 fill-current' : 'text-gray-300'
+        }`}
       />
     ));
-  };
 
   return (
     <div className="w-full bg-gray-50 py-16 min-h-screen">
       <div className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
         
-        {/* Top Section - Search and Filters */}
+        {/* Top Section */}
         <div className="mb-6 lg:mb-8 w-full max-w-4xl mx-auto">
-          {/* Title */}
-                      <h1 className="font-merriweather font-normal text-h1 lg:text-h1-lg leading-tight text-black mb-4 lg:mb-6">
+          <h1 className="font-normal text-lg sm:text-xl lg:text-2xl leading-tight text-black mb-4 lg:mb-6">
             Search Counselors
           </h1>
 
           {/* Search Bar */}
-          <div className="flex items-center gap-3 relative w-full max-w-4xl h-12 lg:h-[48px] rounded-3xl pl-4 lg:pl-6 pr-2 py-1 border border-[#5B7C99] bg-white mb-4 lg:mb-6">
-            {/* Left Icon - Menu/Hamburger */}
-            <div className="flex flex-col justify-center gap-1 w-4 lg:w-5 h-4 lg:h-5">
-              <div className="w-4 lg:w-5 h-0.5 bg-[#5B7C99] rounded"></div>
-              <div className="w-3 lg:w-4 h-0.5 bg-[#5B7C99] rounded"></div>
-              <div className="w-2 lg:w-3 h-0.5 bg-[#5B7C99] rounded"></div>
+          <div className="flex items-center gap-3 relative w-full max-w-4xl h-10 lg:h-[44px] rounded-2xl pl-4 lg:pl-6 pr-2 py-1 border border-[#5B7C99] bg-white mb-4">
+            {/* Hamburger-style icon */}
+            <div className="flex flex-col justify-center gap-1 w-3.5 lg:w-4 h-3.5 lg:h-4">
+              <div className="w-3.5 lg:w-4 h-0.5 bg-[#5B7C99] rounded" />
+              <div className="w-3 lg:w-3.5 h-0.5 bg-[#5B7C99] rounded" />
+              <div className="w-2.5 lg:w-3 h-0.5 bg-[#5B7C99] rounded" />
             </div>
-            
-            {/* Search Input */}
             <input
               type="text"
               placeholder="Search"
-              className="text-[#5B7C99] font-source-sans font-normal text-sm lg:text-base flex-1 outline-none bg-transparent"
+              className="text-[#5B7C99] font-normal text-xs lg:text-sm flex-1 outline-none bg-transparent"
             />
-            
-            {/* Right Search Button */}
-            <div className="flex items-center justify-center w-16 lg:w-[72px] h-8 lg:h-[40px] rounded-2xl lg:rounded-[23px] bg-[#5B7C99] border border-white cursor-pointer">
-              <Search className="w-3 lg:w-4 h-3 lg:h-4 text-white" />
+            <div className="flex items-center justify-center w-12 lg:w-[60px] h-7 lg:h-[36px] rounded-xl bg-[#5B7C99] border border-white cursor-pointer">
+              <Search className="w-3 h-3 lg:w-3.5 lg:h-3.5 text-white" />
             </div>
           </div>
 
           {/* Filter Options */}
-          <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 mb-4 lg:mb-6 w-full">
-                          <div className="flex flex-col gap-2 w-full sm:w-32 lg:w-[120px] h-16 lg:h-[64px]">
-                <label className="text-black font-merriweather font-normal text-sm lg:text-base">Price:</label>
-                <select className="flex-1 px-3 py-2 border border-[#5B7C99] rounded-3xl bg-white text-black font-source-sans font-normal text-sm lg:text-base outline-none">
+          <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 mb-4 w-full">
+            {/* Price Dropdown */}
+            <div className="flex flex-col gap-1 w-full sm:w-28 lg:w-[100px]">
+              <label className="text-black text-xs lg:text-sm">Price:</label>
+              <select className="flex-1 px-2 py-1 border border-[#5B7C99] rounded-xl bg-white text-black text-xs lg:text-sm outline-none">
                 <option>Any</option>
-                <option>$0-$25</option>
-                <option>$25-$50</option>
+                <option>$0–$25</option>
+                <option>$25–$50</option>
                 <option>$50+</option>
               </select>
             </div>
-            
-            <div className="flex flex-col gap-2 w-full sm:flex-1 lg:w-[280px] h-16 lg:h-[64px]">
-              <label className="text-black font-merriweather font-normal text-sm lg:text-base">Topic:</label>
-              <select className="flex-1 px-3 py-2 border border-[#5B7C99] rounded-3xl bg-white text-black font-source-sans font-normal text-sm lg:text-base outline-none">
-                <option>- Select Subject -</option>
-                <option>Mathematics</option>
+
+            {/* Topic Dropdown */}
+            <div className="flex flex-col gap-1 w-full sm:w-36 lg:w-[160px]">
+              <label className="text-black text-xs lg:text-sm">Topic:</label>
+              <select className="flex-1 px-2 py-1 border border-[#5B7C99] rounded-xl bg-white text-black text-xs lg:text-sm outline-none">
+                <option>- Select -</option>
+                <option>Math</option>
                 <option>Science</option>
                 <option>Language</option>
                 <option>History</option>
               </select>
             </div>
-            
-            <div className="flex flex-col gap-2 w-full sm:flex-1 lg:w-[280px] h-16 lg:h-[64px]">
-              <label className="text-black font-merriweather font-normal text-sm lg:text-base">Expertise:</label>
-              <select className="flex-1 px-3 py-2 border border-[#5B7C99] rounded-3xl bg-white text-black font-source-sans font-normal text-sm lg:text-base outline-none">
-                <option>- Select Any Three -</option>
+
+            {/* Expertise Dropdown */}
+            <div className="flex flex-col gap-1 w-full sm:w-36 lg:w-[160px]">
+              <label className="text-black text-xs lg:text-sm">Expertise:</label>
+              <select className="flex-1 px-2 py-1 border border-[#5B7C99] rounded-xl bg-white text-black text-xs lg:text-sm outline-none">
+                <option>- Select -</option>
                 <option>Beginner</option>
                 <option>Intermediate</option>
                 <option>Advanced</option>
@@ -131,105 +137,91 @@ const Counselor = () => {
         </div>
 
         {/* Counselor Cards */}
-        <div className="space-y-4 lg:space-y-3">
+        <div className="space-y-3 lg:space-y-2.5">
           {counselors.map((counselor) => (
-            <div key={counselor.id} className="bg-white rounded-2xl lg:rounded-[24px] shadow-[0px_4px_4px_0px_#00000040] border border-gray-100 p-4 lg:p-6 w-full max-w-4xl mx-auto">
-              
-              <div className="flex flex-col sm:flex-row gap-4 lg:gap-6">
+            <div
+              key={counselor.id}
+              className="bg-white rounded-2xl shadow border border-gray-100 p-4 lg:p-5 w-full max-w-4xl mx-auto"
+            >
+              <div className="flex flex-col sm:flex-row gap-4 lg:gap-5">
+                
                 {/* Profile Image */}
                 <div className="flex-shrink-0 self-start">
-                  <div className="relative">
-                    <img
-                      src={counselor.image}
-                      alt={counselor.name}
-                      className="w-24 h-24 sm:w-28 sm:h-28 lg:w-[186px] lg:h-[186px] object-cover shadow-sm"
-                    />
-                  </div>
+                  <img
+                    src={counselor.image}
+                    alt={counselor.name}
+                    className="w-20 h-20 sm:w-24 sm:h-24 lg:w-[150px] lg:h-[150px] object-cover shadow-sm"
+                  />
                 </div>
 
-                {/* Card Content - Center section */}
+                {/* Card Content */}
                 <div className="flex-1 min-w-0">
-                  {/* Name */}
-                  <h3 className="text-h3 lg:text-h3-lg font-normal text-black font-merriweather mb-2 lg:mb-3 leading-tight">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-medium text-black leading-tight mb-1">
                     {counselor.name}
                   </h3>
-                  
-                  {/* Rating Stars */}
-                  <div className="flex items-center gap-1 mb-3 lg:mb-4">
+                  <div className="flex items-center gap-0.5 mb-2">
                     {renderStars(counselor.rating)}
                   </div>
-
-                  {/* Description */}
-                                      <p className="text-body lg:text-body-lg font-normal text-black font-source-sans leading-relaxed lg:leading-tight mb-3 lg:mb-4">
+                  <p className="text-xs sm:text-sm lg:text-[15px] font-normal text-black leading-relaxed mb-3">
                     {counselor.description}
                   </p>
-
-                  {/* Learn More Link */}
-                  <div className="mb-4 sm:mb-0">
-                    <Link onClick={() => window.scrollTo(0, 0)} to={`/counselor-detail/${counselor.id}`} className="text-body lg:text-body-lg font-normal text-black font-source-sans underline inline-flex items-center gap-2">
+                  <div className="mb-3 sm:mb-0">
+                    <Link
+                      onClick={() => window.scrollTo(0, 0)}
+                      to={`/counselor-detail/${counselor.id}`}
+                      className="text-xs sm:text-sm font-normal text-black underline inline-flex items-center gap-1"
+                    >
                       Learn more
-                      <svg className="w-4 h-4 transform rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17l9.2-9.2M17 17V7H7" />
+                      <svg
+                        className="w-3 h-3 transform rotate-45"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M7 17l9.2-9.2M17 17V7H7"
+                        />
                       </svg>
                     </Link>
                   </div>
                 </div>
 
-                {/* Right Side - Rate and Buttons */}
-                <div className="flex flex-row sm:flex-col justify-between sm:justify-start items-start sm:items-end gap-4 flex-shrink-0">
+                {/* Right Side */}
+                <div className="flex flex-row sm:flex-col justify-between sm:justify-start items-start sm:items-end gap-2 flex-shrink-0">
                   {/* Hourly Rate */}
-                  <div className="sm:mb-8 lg:mb-16">
-                    <p className="text-small lg:text-small-lg font-normal text-black font-merriweather leading-tight">
+                  <div className="sm:mb-6 lg:mb-10">
+                    <p className="text-xs sm:text-sm font-normal text-black">
                       {counselor.hourlyRate}
                     </p>
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex flex-row sm:flex-col gap-2 lg:gap-3 w-full sm:w-auto">
-                    <button 
-                      className="w-full sm:w-48 lg:w-[193px] h-10 lg:h-[48px] text-white px-3 py-2 lg:py-3 rounded-3xl hover:opacity-90 transition-all flex items-center justify-center gap-2 lg:gap-3 font-outfit text-body lg:text-body-lg font-normal"
+                  <div className="flex flex-row sm:flex-col gap-2 w-full sm:w-auto">
+                    <button
+                      className="w-full sm:w-32 lg:w-[150px] h-7 lg:h-[34px] text-white px-2 py-1 rounded-2xl hover:opacity-90 transition-all flex items-center justify-center gap-1 text-xs font-normal"
                       style={{ backgroundColor: '#5B7C99' }}
                     >
-                      <MessageCircle size={14} className="lg:w-4 lg:h-4" />
-                      <span className="hidden sm:inline font-source-sans">Drop a Message</span>
-                      <span className="sm:hidden font-source-sans">Message</span>
+                      <MessageCircle size={12} />
+                      <span className="hidden sm:inline">Drop a Message</span>
+                      <span className="sm:hidden">Message</span>
                     </button>
-                    <button 
-                      className="w-full sm:w-48 lg:w-[193px] h-10 lg:h-[48px] text-white px-3 py-2 lg:py-3 rounded-3xl hover:opacity-90 transition-all flex items-center justify-center gap-2 lg:gap-3 font-outfit text-body lg:text-body-lg font-normal"
+                    <button
+                      className="w-full sm:w-32 lg:w-[150px] h-7 lg:h-[34px] text-white px-2 py-1 rounded-2xl hover:opacity-90 transition-all flex items-center justify-center gap-1 text-xs font-normal"
                       style={{ backgroundColor: '#5B7C99' }}
                     >
-                      <Calendar size={14} className="lg:w-4 lg:h-4" />
-                      <span className="hidden sm:inline font-source-sans">Book a Session</span>
-                      <span className="sm:hidden font-source-sans">Book</span>
+                      <Calendar size={12} />
+                      <span className="hidden sm:inline">Book a Session</span>
+                      <span className="sm:hidden">Book</span>
                     </button>
                   </div>
                 </div>
+
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Pagination */}
-        <div className="flex flex-col items-center gap-3 sm:gap-4 mt-6 sm:mt-8 lg:mt-12">
-          {/* Page Numbers */}
-          <div className="flex items-center gap-1 sm:gap-2 lg:gap-3">
-            <button className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white rounded-lg font-medium text-small lg:text-small-lg transition-colors" style={{backgroundColor: '#6C8BA6'}}>1</button>
-            <button className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg font-medium text-small lg:text-small-lg transition-colors">2</button>
-            <button className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg font-medium text-small lg:text-small-lg transition-colors">3</button>
-            <span className="px-1 sm:px-2 text-gray-600 text-small lg:text-small-lg">...</span>
-            <button className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg font-medium text-small lg:text-small-lg transition-colors">6</button>
-            <button className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg font-medium text-small lg:text-small-lg transition-colors">7</button>
-          </div>
-          
-          {/* Navigation Arrows */}
-          <div className="flex items-center gap-4 sm:gap-6">
-            <button className="text-gray-600 hover:text-gray-800 transition-colors text-body lg:text-body-lg font-medium">
-              ←
-            </button>
-            <button className="text-gray-600 hover:text-gray-800 transition-colors text-body lg:text-body-lg font-medium">
-              →
-            </button>
-          </div>
         </div>
       </div>
     </div>

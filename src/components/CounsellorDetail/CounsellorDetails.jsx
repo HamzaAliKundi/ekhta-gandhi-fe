@@ -101,7 +101,7 @@ const CounsellorDetails = () => {
 
               {/* Hourly Rate */}
               <div className="text-left mb-12">
-                <p className="text-h3 lg:text-h3-lg font-merriweather font-semibold text-black">
+                <p className="text-h3 lg:text-h3-lg  font-semibold text-black">
                   {counselorData.hourlyRate}
                 </p>
               </div>
@@ -109,14 +109,14 @@ const CounsellorDetails = () => {
               {/* Action Buttons */}
               <div className="space-y-3">
                 <button 
-                  className="w-full text-white px-4 py-3 rounded-full hover:opacity-90 transition-all flex items-center justify-center gap-3 font-source-sans text-body lg:text-body-lg font-normal"
+                  className="w-full text-white px-4 py-3 rounded-full hover:opacity-90 transition-all flex items-center justify-center gap-3  text-body lg:text-body-lg font-normal"
                   style={{ backgroundColor: '#5B7C99' }}
                 >
                   <MessageCircle size={18} />
                   Drop a Message
                 </button>
                 <button 
-                  className="w-full text-white px-4 py-3 rounded-full hover:opacity-90 transition-all flex items-center justify-center gap-3 font-source-sans text-body lg:text-body-lg font-normal"
+                  className="w-full text-white px-4 py-3 rounded-full hover:opacity-90 transition-all flex items-center justify-center gap-3  text-body lg:text-body-lg font-normal"
                   style={{ backgroundColor: '#5B7C99' }}
                 >
                   <Calendar size={18} />
@@ -132,12 +132,12 @@ const CounsellorDetails = () => {
             <div className="mb-8">
               {/* Name and Rating */}
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
-                <h1 className="text-h1 lg:text-h1-lg font-merriweather font-normal text-black">
+                <h1 className="text-h1 lg:text-h1-lg  font-normal text-black">
                   {counselorData.name}
                 </h1>
                 <div className="flex items-center gap-2">
                   <Star size={24} className="text-orange-400 fill-current" />
-                  <span className="text-h3 lg:text-h3-lg font-merriweather font-medium text-black">
+                  <span className="text-h3 lg:text-h3-lg  font-medium text-black">
                     {counselorData.rating}
                   </span>
                 </div>
@@ -145,14 +145,14 @@ const CounsellorDetails = () => {
 
               {/* Description */}
               <div className="mb-6">
-                <p className="text-body lg:text-body-lg font-source-sans text-black leading-relaxed mb-3">
+                <p className="text-body lg:text-body-lg  text-black leading-relaxed mb-3">
                   {counselorData.description}
                 </p>
-                <p className="text-body lg:text-body-lg font-source-sans text-black leading-relaxed mb-4">
+                <p className="text-body lg:text-body-lg  text-black leading-relaxed mb-4">
                   {counselorData.additionalDescription}
                 </p>
                 <button 
-                  className="text-blue-600 font-source-sans text-body lg:text-body-lg underline hover:text-blue-700 transition-colors"
+                  className="text-blue-600  text-body lg:text-body-lg underline hover:text-blue-700 transition-colors"
                   onClick={() => setShowFullDescription(!showFullDescription)}
                 >
                   Read more
@@ -164,7 +164,7 @@ const CounsellorDetails = () => {
             <div className="space-y-8 mb-12">
               {/* College */}
               <div>
-                <h2 className="text-h2 lg:text-h2-lg font-merriweather font-medium text-black mb-4">College</h2>
+                <h2 className="text-h2 lg:text-h2-lg  font-medium text-black mb-4">College</h2>
                 <div className="flex flex-wrap gap-3">
                   {counselorData.college.map((item, index) => (
                     <TagPill key={index}>{item}</TagPill>
@@ -174,7 +174,7 @@ const CounsellorDetails = () => {
 
               {/* Degrees */}
               <div>
-                <h2 className="text-h2 lg:text-h2-lg font-merriweather font-medium text-black mb-4">Degrees</h2>
+                <h2 className="text-h2 lg:text-h2-lg  font-medium text-black mb-4">Degrees</h2>
                 <div className="flex flex-wrap gap-3">
                   {counselorData.degrees.map((item, index) => (
                     <TagPill key={index}>{item}</TagPill>
@@ -184,7 +184,7 @@ const CounsellorDetails = () => {
 
               {/* Awards */}
               <div>
-                <h2 className="text-h2 lg:text-h2-lg font-merriweather font-medium text-black mb-4">Awards</h2>
+                <h2 className="text-h2 lg:text-h2-lg  font-medium text-black mb-4">Awards</h2>
                 <div className="flex flex-wrap gap-3">
                   {counselorData.awards.map((item, index) => (
                     <TagPill key={index}>{item}</TagPill>
@@ -194,7 +194,7 @@ const CounsellorDetails = () => {
 
               {/* Certifications */}
               <div>
-                <h2 className="text-h2 lg:text-h2-lg font-merriweather font-medium text-black mb-4">Certifications</h2>
+                <h2 className="text-h2 lg:text-h2-lg  font-medium text-black mb-4">Certifications</h2>
                 <div className="flex flex-wrap gap-3">
                   {counselorData.certifications.map((item, index) => (
                     <TagPill key={index}>{item}</TagPill>
@@ -204,7 +204,7 @@ const CounsellorDetails = () => {
 
               {/* Subjects */}
               <div>
-                <h2 className="text-h2 lg:text-h2-lg font-merriweather font-medium text-black mb-4">Subjects</h2>
+                <h2 className="text-h2 lg:text-h2-lg  font-medium text-black mb-4">Subjects</h2>
                 <div className="flex flex-wrap gap-3">
                   {counselorData.subjects.map((item, index) => (
                     <TagPill key={index}>{item}</TagPill>
@@ -215,28 +215,28 @@ const CounsellorDetails = () => {
 
             {/* Student Reviews */}
             <div>
-                              <h2 className="text-h2 lg:text-h2-lg font-merriweather font-medium text-black mb-6">Students Reviews</h2>
+                              <h2 className="text-h2 lg:text-h2-lg  font-medium text-black mb-6">Students Reviews</h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {counselorData.reviews.map((review) => (
                   <div key={review.id} className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
                     {/* Review Header */}
                     <div className="mb-4">
-                      <h3 className="text-h3 lg:text-h3-lg font-merriweather font-medium text-black mb-2">
+                      <h3 className="text-h3 lg:text-h3-lg  font-medium text-black mb-2">
                         {review.name}
                       </h3>
-                      <p className="text-gray-600 font-source-sans text-small lg:text-small-lg mb-3">
+                      <p className="text-gray-600  text-small lg:text-small-lg mb-3">
                         {review.date}
                       </p>
                       {renderStars(review.rating, 16)}
                     </div>
 
                     {/* Review Text */}
-                    <p className="text-gray-700 font-source-sans text-body lg:text-body-lg leading-relaxed mb-4">
+                    <p className="text-gray-700  text-body lg:text-body-lg leading-relaxed mb-4">
                       {review.review}
                     </p>
 
                     {/* Show More Link */}
-                    <button className="text-blue-600 font-source-sans text-small lg:text-small-lg underline hover:text-blue-700 transition-colors">
+                    <button className="text-blue-600  text-small lg:text-small-lg underline hover:text-blue-700 transition-colors">
                       Show more
                     </button>
                   </div>

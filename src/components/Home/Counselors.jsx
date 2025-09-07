@@ -1,6 +1,7 @@
 import React from 'react'
 
 const HomePageCounselors = () => {
+  // Static list of counselors with name, image, rating, and description
   const counselors = [
     {
       name: "Dr. Sarah Johnson",
@@ -54,142 +55,87 @@ const HomePageCounselors = () => {
 
   return (
     <div className="w-full bg-[#EEF5FF] py-8 sm:py-12 md:py-16">
+      {/* Page container with max-width */}
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-8 md:px-[60px] py-2 sm:py-4 md:py-[8px]">
-        {/* Title */}
-        <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="font-roboto text-xl sm:text-2xl lg:text-3xl font-normal text-black leading-tight px-4">
-            Explore counselors
+        
+        {/* Section Title */}
+        <div className="mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black leading-tight px-4">
+            Explore Counselors
           </h2>
         </div>
 
-        {/* Auto-scrolling Cards Container - Added padding-top to accommodate image overflow */}
+        {/* Horizontal Auto-scrolling Cards */}
         <div className="overflow-hidden pb-4 pt-8">
           <div className="flex gap-6 lg:gap-10 animate-marquee">
-            {/* First set of cards */}
-            {counselors.map((counselor, index) => (
-            <div 
-              key={index}
-              className="bg-white rounded-3xl flex flex-col relative 
-              w-[190px] sm:w-[220px] lg:w-[260px] 
-              h-[160px] sm:h-[180px] lg:h-[200px] 
-              p-3 sm:p-4 shadow-lg flex-shrink-0"
-            >
-              {/* Counselor Image - Positioned absolutely at top-left with proper rounded styling */}
-              <div className="absolute w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] -top-[15px] left-[-15px] sm:-top-[20px] sm:left-[-20px] bg-white rounded-full p-1 sm:p-2 shadow-md z-20">
-                <img 
-                  src={counselor.image} 
-                  alt={counselor.name}
-                  className="w-full h-full object-cover rounded-full border-2 border-gray-100"
-                />
-              </div>
-
-              {/* Name and Rating - Positioned in front of image horizontally */}
-              <div className="absolute top-4 sm:top-6 left-8 sm:left-12 right-3 sm:right-4 z-10">
-                <h3 className="font-bold text-black mb-0 text-xs sm:text-sm lg:text-base leading-tight">
-                  {counselor.name}
-                </h3>
-                
-                {/* Star Rating - smaller stars */}
-                <div className="flex gap-0.5 mb-2 sm:mb-3">
-                  {[...Array(counselor.rating)].map((_, i) => (
-                    <div 
-                      key={i}
-                      className="text-orange-400 text-xs"
-                    >
-                      ★
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Description - Adjusted for smaller card */}
-              <div className="absolute top-16 sm:top-20 left-3 sm:left-4 right-3 sm:right-4 bottom-8 sm:bottom-10 z-10 overflow-hidden">
-                <p className="font-normal text-black 
-                text-xs sm:text-sm 
-                leading-tight tracking-[0%] line-clamp-3">
-                  {counselor.description}
-                </p>
-              </div>
-              
-              {/* Learn More Link */}
-              <div className="absolute bottom-2 sm:bottom-3 right-3 sm:right-4 z-10">
-                <a 
-                  href="#"
-                  className="font-normal text-black underline inline-flex items-center gap-1 text-xs sm:text-sm leading-[100%] tracking-[0%] hover:text-blue-600 transition-colors"
+            {/* Duplicate the counselors list twice for seamless scrolling */}
+            {[...Array(2)].flatMap((_, duplicate) =>
+              counselors.map((counselor, index) => (
+                <div 
+                  key={`${duplicate}-${index}`}
+                  className="bg-white rounded-3xl flex flex-col relative 
+                  w-[180px] sm:w-[210px] lg:w-[250px] 
+                  h-[140px] sm:h-[160px] lg:h-[180px] 
+                  p-3 sm:p-4 shadow-lg flex-shrink-0"
                 >
-                  Learn more
-                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 12L12 4M12 4H4M12 4V12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            ))}
-            
-            {/* Duplicate set of cards for seamless marquee */}
-            {counselors.map((counselor, index) => (
-            <div 
-              key={`duplicate-${index}`}
-              className="bg-white rounded-3xl flex flex-col relative 
-              w-[190px] sm:w-[220px] lg:w-[260px] 
-              h-[160px] sm:h-[180px] lg:h-[200px] 
-              p-3 sm:p-4 shadow-lg flex-shrink-0"
-            >
-              {/* Counselor Image - Positioned absolutely at top-left with proper rounded styling */}
-              <div className="absolute w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] -top-[15px] left-[-15px] sm:-top-[20px] sm:left-[-20px] bg-white rounded-full p-1 sm:p-2 shadow-md z-20">
-                <img 
-                  src={counselor.image} 
-                  alt={counselor.name}
-                  className="w-full h-full object-cover rounded-full border-2 border-gray-100"
-                />
-              </div>
+                  {/* Counselor Profile Image */}
+                  <div className="absolute w-[45px] h-[45px] sm:w-[55px] sm:h-[55px] -top-[12px] left-[-12px] sm:-top-[16px] sm:left-[-16px] bg-white rounded-full p-1 sm:p-2 shadow-md z-20">
+                    <img 
+                      src={counselor.image} 
+                      alt={counselor.name}
+                      className="w-full h-full object-cover rounded-full border-2 border-gray-100"
+                    />
+                  </div>
 
-              {/* Name and Rating - Positioned in front of image horizontally */}
-              <div className="absolute top-4 sm:top-6 left-8 sm:left-12 right-3 sm:right-4 z-10">
-                <h3 className="font-bold text-black mb-0 text-xs sm:text-sm lg:text-base leading-tight">
-                  {counselor.name}
-                </h3>
-                
-                {/* Star Rating - smaller stars */}
-                <div className="flex gap-0.5 mb-2 sm:mb-3">
-                  {[...Array(counselor.rating)].map((_, i) => (
-                    <div 
-                      key={i}
-                      className="text-orange-400 text-xs"
-                    >
-                      ★
+                  {/* Counselor Name and Rating Stars */}
+                  <div className="absolute top-3 sm:top-5 left-8 sm:left-12 right-3 sm:right-4 z-10">
+                    <h3 className="font-roboto font-bold text-black mb-0 text-[11px] sm:text-xs lg:text-sm leading-tight">
+                      {counselor.name}
+                    </h3>
+                    
+                    {/* Display rating as ★ symbols */}
+                    <div className="flex gap-0.5 mb-1 sm:mb-1.5 font-poppins">
+                      {[...Array(counselor.rating)].map((_, i) => (
+                        <div 
+                          key={i}
+                          className="text-orange-400 text-[9px]"
+                        >
+                          ★
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-              </div>
+                  </div>
 
-              {/* Description - Adjusted for smaller card */}
-              <div className="absolute top-16 sm:top-20 left-3 sm:left-4 right-3 sm:right-4 bottom-8 sm:bottom-10 z-10 overflow-hidden">
-                <p className="font-normal text-black 
-                text-xs sm:text-sm 
-                leading-tight tracking-[0%] line-clamp-3">
-                  {counselor.description}
-                </p>
-              </div>
-              
-              {/* Learn More Link */}
-              <div className="absolute bottom-2 sm:bottom-3 right-3 sm:right-4 z-10">
-                <a 
-                  href="#"
-                  className="font-normal text-black underline inline-flex items-center gap-1 text-xs sm:text-sm leading-[100%] tracking-[0%] hover:text-blue-600 transition-colors"
-                >
-                  Learn more
-                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 12L12 4M12 4H4M12 4V12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            ))}
+                  {/* Short Description (clamped to 3 lines) */}
+                  <div className="absolute top-14 sm:top-16 left-3 sm:left-4 right-3 sm:right-4 bottom-6 sm:bottom-8 z-10 overflow-hidden">
+                      <p className="font-poppins font-normal text-black 
+                      text-[10px] sm:text-[11px] 
+                      leading-snug tracking-[0%] line-clamp-3">
+                      {counselor.description}
+                     </p>
+                  </div>
+
+                  {/* "Learn More" Link */}
+                  <div className="absolute bottom-1.5 sm:bottom-2.5 right-3 sm:right-4 z-10">
+                    <a 
+                      href="#"
+                      className="font-poppins font-normal text-black underline inline-flex items-center gap-1 text-[9px] sm:text-[10px] leading-[100%] tracking-[0%] hover:text-blue-600 transition-colors"
+                    >
+                      Learn more
+                      {/* Small arrow icon */}
+                      <svg width="9" height="9" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 12L12 4M12 4H4M12 4V12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              ))
+            )}
           </div>
         </div>
       </div>
       
+      {/* Local CSS styles for marquee animation */}
       <style jsx>{`
         @keyframes marquee {
           0% {
@@ -205,7 +151,7 @@ const HomePageCounselors = () => {
         }
         
         .animate-marquee:hover {
-          animation-play-state: paused;
+          animation-play-state: paused; /* Pause animation when hovered */
         }
       `}</style>
     </div>

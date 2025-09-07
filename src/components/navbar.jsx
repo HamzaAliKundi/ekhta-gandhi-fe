@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
@@ -17,24 +17,27 @@ const Navbar = () => {
         {/* Left: Logo */}
         <div className="w-[140px] sm:w-[160px] md:w-[180px] h-[40px] px-3 sm:px-5 md:px-[20px] py-2 sm:py-3 md:py-[10px] flex items-center gap-2 sm:gap-3 md:gap-[12px] rounded-[25px] bg-white border border-gray-200 shadow-sm">
           <Link to="/" className="flex items-center gap-2 sm:gap-3 md:gap-[12px]">
-            {/* Logo SVG */}
             <img src="/logo.svg" alt="Logo" className="w-4 h-4 sm:w-5 sm:h-5" />
-            <span className="text-black font-semibold text-xs sm:text-sm font-merriweather">LogoLogoLogo</span>
+            <span className="text-black font-semibold text-[10px] sm:text-xs">LogoLogoLogo</span>
           </Link>
         </div>
 
         {/* Center: Navigation links */}
         <div className="hidden md:flex items-center justify-center gap-[32px] w-[400px] h-[40px]">
-          <Link 
-            to="/counselor" 
-            className={`text-white hover:text-gray-100 transition-all duration-300 font-merriweather text-sm font-medium leading-none tracking-wide ${isActive('/counselor') ? 'text-gray-100' : 'text-white'}`}
+          <Link
+            to="/counselor"
+            className={`text-white hover:text-gray-100 transition-all duration-300 text-xs font-medium leading-none tracking-wide ${
+              isActive('/counselor') ? 'text-gray-100' : 'text-white'
+            }`}
             onClick={handleLinkClick}
           >
             Find Counselor
           </Link>
-          <Link 
-            to="/signup" 
-            className={`text-white hover:text-gray-100 transition-all duration-300 font-merriweather text-sm font-medium leading-none tracking-wide ${isActive('/become-counselor') ? 'text-gray-100' : 'text-white'}`}
+          <Link
+            to="/signup"
+            className={`text-white hover:text-gray-100 transition-all duration-300 text-xs font-medium leading-none tracking-wide ${
+              isActive('/become-counselor') ? 'text-gray-100' : 'text-white'
+            }`}
             onClick={handleLinkClick}
           >
             Be a Counselor
@@ -45,46 +48,46 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-[16px]">
           {/* Login dropdown */}
           <div className="relative group">
-            <button className="px-2 py-1 text-white hover:text-gray-200 transition-all duration-300 font-merriweather text-[15px] font-normal tracking-wide flex items-center gap-1">
+            <button className="px-2 py-1 text-white hover:text-gray-200 transition-all duration-300 text-xs font-medium leading-none tracking-wide flex items-center gap-1">
               <span>Login</span>
-              <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            
+
             {/* Dropdown menu */}
-            <div className="absolute top-full left-0 mt-2 w-[220px] bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-              <div className="py-3">
-                                                   <a 
-                    href="https://ekhta-gandhi-user.vercel.app/login" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="block px-5 py-3 text-small lg:text-small-lg text-gray-700 hover:bg-gray-50 transition-all duration-200 font-source-sans font-medium"
-                  >
-                    Login as Student
-                  </a>
-                  <a 
-                    href="https://ekhta-gandhi-counselor.vercel.app/login" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="block px-5 py-3 text-small lg:text-small-lg text-gray-700 hover:bg-gray-50 transition-all duration-200 font-source-sans font-medium"
-                  >
-                    Login as Counsellor
-                  </a>
+            <div className="absolute top-full left-0 mt-2 w-[200px] bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div className="flex flex-col divide-y divide-gray-200">
+                <a
+                  href="https://ekhta-gandhi-user.vercel.app/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all duration-200 font-source-sans"
+                >
+                  Login as Student
+                </a>
+                <a
+                  href="https://ekhta-gandhi-counselor.vercel.app/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all duration-200 font-source-sans"
+                >
+                  Login as Counselor
+                </a>
               </div>
             </div>
           </div>
 
           {/* Sign up button */}
-          <Link 
-            to="/signup" 
-            className="px-2 py-1 text-white hover:text-gray-200 transition-all duration-300 font-merriweather text-[15px] font-normal tracking-wide"
+          <Link
+            to="/signup"
+            className="px-2 py-1 text-white hover:text-gray-200 transition-all duration-300 text-xs font-medium leading-none tracking-wide"
           >
             <span>Sign up</span>
           </Link>
         </div>
 
-        {/* Hamburger menu button (mobile only) */}
+        {/* Hamburger menu (mobile) */}
         <button
           className="md:hidden ml-2 p-2 rounded focus:outline-none focus:ring-2 focus:ring-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -97,54 +100,6 @@ const Navbar = () => {
             )}
           </svg>
         </button>
-      </div>
-
-      {/* Mobile menu dropdown */}
-      <div className={`md:hidden absolute top-[90px] left-0 w-full bg-[#5B7C99] shadow-xl border-t border-white/10 z-50 transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 max-h-[500px]' : 'opacity-0 max-h-0 overflow-hidden'}`}>
-        <div className="flex flex-col py-6 px-4">
-          {/* Navigation Links */}
-          <div className="flex flex-col space-y-1 mb-6">
-            <Link 
-              to="/counselor" 
-              className="px-4 py-3 text-white hover:text-gray-100 hover:bg-white/10 transition-all duration-300 font-merriweather font-normal text-base rounded-lg" 
-              onClick={handleLinkClick}
-            >
-              Find Counselor
-            </Link>
-            <Link 
-              to="/signup" 
-              className="px-4 py-3 text-white hover:text-gray-100 hover:bg-white/10 transition-all duration-300 font-merriweather font-normal text-base rounded-lg" 
-              onClick={handleLinkClick}
-            >
-              Be a Counselor
-            </Link>
-          </div>
-          
-          {/* Divider */}
-          <div className="border-t border-white/20 mb-6"></div>
-          
-          {/* Mobile Login options */}
-          <div className="flex flex-col space-y-2">
-            <a 
-              href="https://ekhta-gandhi-user.vercel.app/login" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="px-4 py-3 text-white hover:text-gray-100 hover:bg-white/10 transition-all duration-300 font-merriweather font-normal text-base rounded-lg"
-              onClick={handleLinkClick}
-            >
-              Login as Student
-            </a>
-            <a 
-              href="https://ekhta-gandhi-counselor.vercel.app/login" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="px-4 py-3 text-white hover:text-gray-100 hover:bg-white/10 transition-all duration-300 font-merriweather font-normal text-base rounded-lg"
-              onClick={handleLinkClick}
-            >
-              Login as Counsellor
-            </a>
-          </div>
-        </div>
       </div>
     </nav>
   );
