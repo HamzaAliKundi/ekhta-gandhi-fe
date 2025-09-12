@@ -5,7 +5,8 @@ const Register = () => {
         fullName: '',
         email: '',
         password: '',
-        confirmPassword: ''
+        confirmPassword: '',
+        role: 'student' // default to student
     });
 
     const handleInputChange = (e) => {
@@ -20,6 +21,14 @@ const Register = () => {
         e.preventDefault();
         // Handle form submission logic here
         console.log('Form submitted:', formData);
+        console.log('Registering as:', formData.role);
+        
+        // Redirect based on role after successful registration
+        // if (formData.role === 'student') {
+        //     // Redirect to student dashboard
+        // } else {
+        //     // Redirect to counsellor dashboard
+        // }
     };
 
     return (
@@ -51,6 +60,41 @@ const Register = () => {
                                     <h1 className="text-h1 lg:text-h1-lg font-normal text-gray-900 font-merriweather">
                                         Create an Account
                                     </h1>
+                                </div>
+
+                                {/* Role Selection */}
+                                <div className="mb-6">
+                                    <p className="text-body lg:text-body-lg font-normal text-gray-700 font-merriweather mb-4">
+                                        I want to sign up as a:
+                                    </p>
+                                    <div className="flex flex-col sm:flex-row gap-4">
+                                        <label className="flex items-center cursor-pointer">
+                                            <input
+                                                type="radio"
+                                                name="role"
+                                                value="student"
+                                                checked={formData.role === 'student'}
+                                                onChange={handleInputChange}
+                                                className="w-4 h-4 text-[#5B7C99] border-gray-300 focus:ring-[#5B7C99]"
+                                            />
+                                            <span className="ml-3 text-body lg:text-body-lg font-normal text-gray-700 font-source-sans">
+                                                Student
+                                            </span>
+                                        </label>
+                                        <label className="flex items-center cursor-pointer">
+                                            <input
+                                                type="radio"
+                                                name="role"
+                                                value="counsellor"
+                                                checked={formData.role === 'counsellor'}
+                                                onChange={handleInputChange}
+                                                className="w-4 h-4 text-[#5B7C99] border-gray-300 focus:ring-[#5B7C99]"
+                                            />
+                                            <span className="ml-3 text-body lg:text-body-lg font-normal text-gray-700 font-source-sans">
+                                                Counsellor
+                                            </span>
+                                        </label>
+                                    </div>
                                 </div>
 
                                 {/* Form */}
