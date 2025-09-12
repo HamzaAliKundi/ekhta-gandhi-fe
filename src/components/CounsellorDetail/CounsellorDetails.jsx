@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { MessageCircle, Calendar, Star } from 'lucide-react';
 
 const CounsellorDetails = () => {
-  const [showFullDescription, setShowFullDescription] = useState(false);
-
   const counselorData = {
     name: "Zeke Yeager",
     image: "/Home/user-2.svg",
@@ -27,20 +25,6 @@ const CounsellorDetails = () => {
       },
       {
         id: 2,
-        name: "Leyla",
-        date: "February 16, 2023",
-        rating: 5,
-        review: "Jak is a great teacher. I was looking for a teacher to improve my speaking for a month, and I found Jak's profile. I didn't make a mistake choosing him. Jak is one of the most talented......."
-      },
-      {
-        id: 3,
-        name: "Nicolo",
-        date: "May 8, 2024",
-        rating: 5,
-        review: "I've just finished 21 lessons with Jahan, and I can't even begin to describe how much I've improved! Not only is he an excellent teacher, but he also makes every lesson fun and....."
-      },
-      {
-        id: 4,
         name: "Leyla",
         date: "February 16, 2023",
         rating: 5,
@@ -72,12 +56,6 @@ const CounsellorDetails = () => {
     );
   };
 
-  const TagPill = ({ children, className = "" }) => (
-    <span className={`inline-block px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-small lg:text-small-lg font-medium border border-gray-200 ${className}`}>
-      {children}
-    </span>
-  );
-
   return (
     <div className="w-full bg-white min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
@@ -91,17 +69,13 @@ const CounsellorDetails = () => {
                 <img
                   src={counselorData.image}
                   alt={counselorData.name}
-                  className="w-full h-64  shadow-sm"
-                  onError={(e) => {
-                    e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI1NiIgdmlld0JveD0iMCAwIDIwMCAyNTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjU2IiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iNDAiIGZpbGw9IiM5Qjk5OUIiLz4KPGV4bGlwc2UgY3g9IjEwMCIgY3k9IjE5MCIgcng9IjYwIiByeT0iNDAiIGZpbGw9IiM5Qjk5OUIiLz4KPC9zdmc+Cg==';
-                  }}
+                  className="w-full h-64 shadow-sm"
                 />
-               
               </div>
 
               {/* Hourly Rate */}
-              <div className="text-left mb-12">
-                <p className="text-h3 lg:text-h3-lg  font-semibold text-black">
+              <div className="text-left mb-10">
+                <p className="text-base sm:text-lg font-medium text-black">
                   {counselorData.hourlyRate}
                 </p>
               </div>
@@ -109,14 +83,14 @@ const CounsellorDetails = () => {
               {/* Action Buttons */}
               <div className="space-y-3">
                 <button 
-                  className="w-full text-white px-4 py-3 rounded-full hover:opacity-90 transition-all flex items-center justify-center gap-3  text-body lg:text-body-lg font-normal"
+                  className="w-full text-white px-4 py-3 rounded-full hover:opacity-90 transition-all flex items-center justify-center gap-3 text-sm sm:text-base font-normal"
                   style={{ backgroundColor: '#5B7C99' }}
                 >
                   <MessageCircle size={18} />
                   Drop a Message
                 </button>
                 <button 
-                  className="w-full text-white px-4 py-3 rounded-full hover:opacity-90 transition-all flex items-center justify-center gap-3  text-body lg:text-body-lg font-normal"
+                  className="w-full text-white px-4 py-3 rounded-full hover:opacity-90 transition-all flex items-center justify-center gap-3 text-sm sm:text-base font-normal"
                   style={{ backgroundColor: '#5B7C99' }}
                 >
                   <Calendar size={18} />
@@ -130,14 +104,13 @@ const CounsellorDetails = () => {
           <div className="flex-1">
             {/* Header Section */}
             <div className="mb-8">
-              {/* Name and Rating */}
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
-                <h1 className="text-h1 lg:text-h1-lg  font-normal text-black">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black">
                   {counselorData.name}
                 </h1>
                 <div className="flex items-center gap-2">
                   <Star size={24} className="text-orange-400 fill-current" />
-                  <span className="text-h3 lg:text-h3-lg  font-medium text-black">
+                  <span className="text-lg sm:text-xl lg:text-2xl font-medium text-black">
                     {counselorData.rating}
                   </span>
                 </div>
@@ -145,98 +118,84 @@ const CounsellorDetails = () => {
 
               {/* Description */}
               <div className="mb-6">
-                <p className="text-body lg:text-body-lg  text-black leading-relaxed mb-3">
+                <p className="text-sm sm:text-base lg:text-lg text-black leading-relaxed mb-3">
                   {counselorData.description}
                 </p>
-                <p className="text-body lg:text-body-lg  text-black leading-relaxed mb-4">
+                <p className="text-sm sm:text-base lg:text-lg text-black leading-relaxed">
                   {counselorData.additionalDescription}
                 </p>
-                <button 
-                  className="text-blue-600  text-body lg:text-body-lg underline hover:text-blue-700 transition-colors"
-                  onClick={() => setShowFullDescription(!showFullDescription)}
-                >
-                  Read more
-                </button>
               </div>
             </div>
 
             {/* Credentials Sections */}
             <div className="space-y-8 mb-12">
-              {/* College */}
               <div>
-                <h2 className="text-h2 lg:text-h2-lg  font-medium text-black mb-4">College</h2>
-                <div className="flex flex-wrap gap-3">
+                <h2 className="text-xl sm:text-2xl font-medium text-black mb-2">College</h2>
+                <ul className="list-disc list-inside text-sm sm:text-base text-gray-700">
                   {counselorData.college.map((item, index) => (
-                    <TagPill key={index}>{item}</TagPill>
+                    <li key={index}>{item}</li>
                   ))}
-                </div>
+                </ul>
               </div>
 
-              {/* Degrees */}
               <div>
-                <h2 className="text-h2 lg:text-h2-lg  font-medium text-black mb-4">Degrees</h2>
-                <div className="flex flex-wrap gap-3">
+                <h2 className="text-xl sm:text-2xl font-medium text-black mb-2">Degrees</h2>
+                <ul className="list-disc list-inside text-sm sm:text-base text-gray-700">
                   {counselorData.degrees.map((item, index) => (
-                    <TagPill key={index}>{item}</TagPill>
+                    <li key={index}>{item}</li>
                   ))}
-                </div>
+                </ul>
               </div>
 
-              {/* Awards */}
               <div>
-                <h2 className="text-h2 lg:text-h2-lg  font-medium text-black mb-4">Awards</h2>
-                <div className="flex flex-wrap gap-3">
+                <h2 className="text-xl sm:text-2xl font-medium text-black mb-2">Awards</h2>
+                <ul className="list-disc list-inside text-sm sm:text-base text-gray-700">
                   {counselorData.awards.map((item, index) => (
-                    <TagPill key={index}>{item}</TagPill>
+                    <li key={index}>{item}</li>
                   ))}
-                </div>
+                </ul>
               </div>
 
-              {/* Certifications */}
               <div>
-                <h2 className="text-h2 lg:text-h2-lg  font-medium text-black mb-4">Certifications</h2>
-                <div className="flex flex-wrap gap-3">
+                <h2 className="text-xl sm:text-2xl font-medium text-black mb-2">Certifications</h2>
+                <ul className="list-disc list-inside text-sm sm:text-base text-gray-700">
                   {counselorData.certifications.map((item, index) => (
-                    <TagPill key={index}>{item}</TagPill>
+                    <li key={index}>{item}</li>
                   ))}
-                </div>
+                </ul>
               </div>
 
-              {/* Subjects */}
               <div>
-                <h2 className="text-h2 lg:text-h2-lg  font-medium text-black mb-4">Subjects</h2>
-                <div className="flex flex-wrap gap-3">
+                <h2 className="text-xl sm:text-2xl font-medium text-black mb-2">Subjects</h2>
+                <ul className="list-disc list-inside text-sm sm:text-base text-gray-700">
                   {counselorData.subjects.map((item, index) => (
-                    <TagPill key={index}>{item}</TagPill>
+                    <li key={index}>{item}</li>
                   ))}
-                </div>
+                </ul>
               </div>
             </div>
 
             {/* Student Reviews */}
             <div>
-                              <h2 className="text-h2 lg:text-h2-lg  font-medium text-black mb-6">Students Reviews</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <h2 className="text-xl sm:text-2xl font-medium text-black mb-6">Students Reviews</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 {counselorData.reviews.map((review) => (
-                  <div key={review.id} className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-                    {/* Review Header */}
-                    <div className="mb-4">
-                      <h3 className="text-h3 lg:text-h3-lg  font-medium text-black mb-2">
+                  <div key={review.id} className="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
+                    <div className="mb-3">
+                      <h3 className="text-base sm:text-lg font-medium text-black mb-1">
                         {review.name}
                       </h3>
-                      <p className="text-gray-600  text-small lg:text-small-lg mb-3">
+                      <p className="text-gray-600 text-xs sm:text-sm mb-2">
                         {review.date}
                       </p>
-                      {renderStars(review.rating, 16)}
+                      {renderStars(review.rating, 14)}
                     </div>
 
-                    {/* Review Text */}
-                    <p className="text-gray-700  text-body lg:text-body-lg leading-relaxed mb-4">
+                    <p className="text-gray-700 text-sm leading-relaxed mb-2">
                       {review.review}
                     </p>
 
-                    {/* Show More Link */}
-                    <button className="text-blue-600  text-small lg:text-small-lg underline hover:text-blue-700 transition-colors">
+                    <button className="text-blue-600 text-xs underline hover:text-blue-700 transition-colors">
                       Show more
                     </button>
                   </div>
@@ -251,3 +210,4 @@ const CounsellorDetails = () => {
 };
 
 export default CounsellorDetails;
+

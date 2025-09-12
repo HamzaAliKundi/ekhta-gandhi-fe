@@ -5,153 +5,62 @@ import BlogCard from './BlogCard';
 const BlogPost = () => {
     const { id } = useParams();
 
-    // Sample blog data - in a real app, this would come from an API
     const blogPosts = {
         1: {
             id: 1,
             image: '/blog/Home.svg',
             title: 'When Should You Start Preparing?',
             readTime: '12 min read',
-            content: `
-                <p>Applying to college is one of the most important — and stressful — parts of high school, but applying too late doesn't have to be. Here's what to know about timing your college applications and when to start preparing for the college application process.</p>
-                
-                <h2>Here are the top 10 college application mistakes — and how you can avoid them:</h2>
-                
-                <h3>1. Starting Too Late</h3>
-                <p>Mistake: Many students underestimate how long college applications take.</p>
-                <p>Fix: Counselors suggest and admissions experts recommend starting applications the summer before senior year. This gives you time to craft thoughtful essays, gather recommendation letters, and complete all requirements without rushing.</p>
-                
-                <h3>2. Not Customizing Essays for Each School</h3>
-                <p>Mistake: Submitting generic essays that could apply to any school or using the same essay for multiple schools without customization.</p>
-                <p>Fix: Each essay should be tailored to the specific school and program you're applying to. Research the school's values, programs, and culture, then customize your essays accordingly.</p>
-                
-                <h3>3. Weak or Cliché Essays</h3>
-                <p>Mistake: Writing about overused topics like winning the big game or without depth or personal insight.</p>
-                <p>Fix: Choose topics that reveal something unique about you. Focus on specific moments, experiences, or realizations that shaped who you are. Show, don't just tell, through concrete examples and vivid storytelling.</p>
-                
-                <h3>4. Ignoring Application Instructions</h3>
-                <p>Mistake: Not following specific formatting requirements, word limits, or submission guidelines.</p>
-                <p>Fix: Read application instructions carefully and follow them exactly. Create a checklist for each school's requirements and double-check everything before submitting.</p>
-                
-                <h3>5. Listing Activities Without Context</h3>
-                <p>Mistake: Simply listing extracurricular activities without explaining their significance or your role.</p>
-                <p>Fix: For each activity, explain your role, responsibilities, achievements, and what you learned. Quantify your impact when possible — mention specific accomplishments, leadership roles, or hours contributed.</p>
-                
-                <h3>6. Overlooking Smaller Details</h3>
-                <p>Mistake: Applying only to highly selective schools without a realistic mix of targets and safeties.</p>
-                <p>Fix: Research and apply to a balanced mix of reach, target, and safety schools. This ensures you'll have options and reduces stress during the admissions process.</p>
-                
-                <h3>7. Submitting Applications With Errors</h3>
-                <p>Mistake: Typos, grammatical errors, factual mistakes, or forgetting to proofread.</p>
-                <p>Fix: Proofread everything multiple times. Read applications aloud, use spell-check, and have others review your materials. Take breaks between writing and editing to see your work with fresh eyes.</p>
-                
-                <h3>8. Not Preparing for Interviews</h3>
-                <p>Mistake: Not confirming that all materials were received or missing deadlines due to incomplete applications.</p>
-                <p>Fix: Create a tracking system for each school's requirements and deadlines, and follow up to ensure all materials were received. Submit applications well before deadlines to account for technical issues.</p>
-                
-                <h3>9. Forgetting to Follow Up</h3>
-                <p>Mistake: Having parents fill out forms or write essays, showing a lack of independence.</p>
-                <p>Fix: While parents can provide guidance and support, students should take ownership of their applications. Admissions officers want to hear your voice, not your parents'. Both high school counselors and college admissions officers can usually tell when a parent has been overly involved in the process.</p>
-                
-                <h3>10. Letting Parents Do All the Work</h3>
-                <p>Mistake: Waiting until the last minute to start applications, leading to rushed, lower-quality submissions.</p>
-                <p>Fix: Start early and create a timeline. Break down the application process into manageable tasks and set personal deadlines well before official ones. This allows time for multiple drafts, revisions, and careful review.</p>
-            `
         },
         2: {
             id: 2,
             image: '/blog/Home2.svg',
             title: 'How do you get Support Through the Process?',
             readTime: '12 min read',
-            content: `
-                <p>Getting support during the college application process is crucial for success. Here's how to build a strong support network and get the help you need.</p>
-                
-                <h2>Building Your Support Network</h2>
-                
-                <h3>1. School Counselors</h3>
-                <p>Your school counselor is your first line of support. They can help with course selection, college recommendations, and application guidance.</p>
-                
-                <h3>2. Teachers and Mentors</h3>
-                <p>Build relationships with teachers who know you well. They can provide recommendation letters and valuable advice about your academic strengths.</p>
-                
-                <h3>3. Family Support</h3>
-                <p>While you should take ownership of your applications, family members can provide emotional support and help with logistics like scheduling visits and managing deadlines.</p>
-                
-                <h3>4. Peer Networks</h3>
-                <p>Connect with other students going through the same process. You can share resources, study together for standardized tests, and provide mutual encouragement.</p>
-                
-                <h3>5. Professional Counselors</h3>
-                <p>Consider working with independent college counselors if you need additional support, especially if your school counselor has a large caseload.</p>
-            `
         }
     };
 
-    // Related posts (excluding current post)
     const relatedPosts = Object.values(blogPosts)
         .filter(post => post.id !== parseInt(id))
         .slice(0, 3);
 
     return (
         <div className="min-h-screen bg-white">
-            {/* Content Section - Single Column, Centered */}
+            {/* Content Section */}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
                 {/* Title */}
-                <h1 className="text-h1 lg:text-h1-lg font-bold text-black mb-4 sm:mb-6 leading-tight font-merriweather">
+                <h1 className="font-bold text-black mb-4 sm:mb-6 leading-tight">
                     When Should You Start Preparing?
                 </h1>
 
                 {/* Intro Paragraph */}
-                <p className="text-black text-body lg:text-body-lg mb-4 sm:mb-6 leading-relaxed font-source-sans">
+                <p className="text-black mb-4 sm:mb-6 leading-relaxed">
                     Applying to college is one of the most important — and stressful — parts of high school, but applying too late doesn't have to be. Here's what to know about timing your college applications and when to start preparing for the college application process.
                 </p>
 
                 {/* Sub-heading */}
-                <h2 className="text-h2 lg:text-h2-lg font-bold text-black mb-6 sm:mb-8 font-merriweather">
+                <h2 className="font-bold text-black mb-6 sm:mb-8">
                     Here are the top 10 college application mistakes — and how you can avoid them.
                 </h2>
 
                 {/* Multi-Image Section */}
                 <div className="mb-12">
                     <div className="grid grid-cols-4 gap-3 h-[300px] sm:h-[400px]">
-                        {/* Left Column - Large Image */}
                         <div className="col-span-2 relative rounded-lg overflow-hidden shadow-md">
-                            <img
-                                src="/blog/Home.svg"
-                                alt="College preparation"
-                                className="w-full h-full object-cover"
-                            />
+                            <img src="/blog/Home.svg" alt="College preparation" className="w-full h-full object-cover" />
                         </div>
 
-                        {/* Right Column - 2 Stacked Images */}
                         <div className="grid grid-rows-2 gap-3">
-                            {/* Top Right Image */}
                             <div className="relative rounded-lg overflow-hidden shadow-md">
-                                <img
-                                    src="/blog/Home2.svg"
-                                    alt="Student working"
-                                    className="w-full h-full object-cover"
-                                />
-                                
+                                <img src="/blog/Home2.svg" alt="Student working" className="w-full h-full object-cover" />
                             </div>
-
-                            {/* Bottom Right Image */}
                             <div className="relative rounded-lg overflow-hidden shadow-md">
-                                <img
-                                    src="/blog/Home3.svg"
-                                    alt="College application"
-                                    className="w-full h-full object-cover"
-                                />
-                                
+                                <img src="/blog/Home3.svg" alt="College application" className="w-full h-full object-cover" />
                             </div>
                         </div>
 
-                        {/* Fourth Image - Rightmost Column */}
                         <div className="relative rounded-lg overflow-hidden shadow-md">
-                            <img
-                                src="/blog/Home.svg"
-                                alt="College preparation"
-                                className="w-full h-full object-cover"
-                            />
+                            <img src="/blog/Home.svg" alt="College preparation" className="w-full h-full object-cover" />
                         </div>
                     </div>
                 </div>
@@ -160,84 +69,84 @@ const BlogPost = () => {
                 <div className="space-y-8">
                     {/* Point 1 */}
                     <div>
-                        <h3 className="text-h3 lg:text-h3-lg font-bold text-black mb-2 sm:mb-3 font-merriweather">1. Starting Too Late</h3>
-                        <p className="text-black text-body lg:text-body-lg mb-2 font-source-sans"><strong>Mistake:</strong> Many students underestimate how long college applications take.</p>
-                        <p className="text-black text-body lg:text-body-lg font-source-sans"><strong>Fix:</strong> Counselors suggest and admissions experts recommend starting applications the summer before senior year. This gives you time to craft thoughtful essays, gather recommendation letters, and complete all requirements without rushing.</p>
+                        <h3 className="font-bold text-black mb-2 sm:mb-3">1. Starting Too Late</h3>
+                        <p className="text-black mb-2"><strong>Mistake:</strong> Many students underestimate how long college applications take.</p>
+                        <p className="text-black"><strong>Fix:</strong> Counselors suggest and admissions experts recommend starting applications the summer before senior year. This gives you time to craft thoughtful essays, gather recommendation letters, and complete all requirements without rushing.</p>
                     </div>
 
                     {/* Point 2 */}
                     <div>
-                        <h3 className="text-h3 lg:text-h3-lg font-bold text-black mb-2 sm:mb-3">2. Not Customizing Essays for Each School</h3>
-                        <p className="text-black text-body lg:text-body-lg mb-2"><strong>Mistake:</strong> Submitting generic essays that could apply to any school or using the same essay for multiple schools without customization.</p>
-                        <p className="text-black text-body lg:text-body-lg"><strong>Fix:</strong> Each essay should be tailored to the specific school and program you're applying to. Research the school's values, programs, and culture, then customize your essays accordingly.</p>
+                        <h3 className="font-bold text-black mb-2 sm:mb-3">2. Not Customizing Essays for Each School</h3>
+                        <p className="text-black mb-2"><strong>Mistake:</strong> Submitting generic essays that could apply to any school or using the same essay for multiple schools without customization.</p>
+                        <p className="text-black"><strong>Fix:</strong> Each essay should be tailored to the specific school and program you're applying to. Research the school's values, programs, and culture, then customize your essays accordingly.</p>
                     </div>
 
                     {/* Point 3 */}
                     <div>
-                        <h3 className="text-h3 lg:text-h3-lg font-bold text-black mb-2 sm:mb-3">3. Weak or Cliché Essays</h3>
-                        <p className="text-black text-body lg:text-body-lg mb-2"><strong>Mistake:</strong> Writing about overused topics like winning the big game or without depth or personal insight.</p>
-                        <p className="text-black text-body lg:text-body-lg"><strong>Fix:</strong> Choose topics that reveal something unique about you. Focus on specific moments, experiences, or realizations that shaped who you are. Show, don't just tell, through concrete examples and vivid storytelling.</p>
+                        <h3 className="font-bold text-black mb-2 sm:mb-3">3. Weak or Cliché Essays</h3>
+                        <p className="text-black mb-2"><strong>Mistake:</strong> Writing about overused topics like winning the big game or without depth or personal insight.</p>
+                        <p className="text-black"><strong>Fix:</strong> Choose topics that reveal something unique about you. Focus on specific moments, experiences, or realizations that shaped who you are. Show, don't just tell, through concrete examples and vivid storytelling.</p>
                     </div>
 
                     {/* Point 4 */}
                     <div>
-                        <h3 className="text-h3 lg:text-h3-lg font-bold text-black mb-2 sm:mb-3">4. Ignoring Application Instructions</h3>
-                        <p className="text-black text-body lg:text-body-lg mb-2"><strong>Mistake:</strong> Not following specific formatting requirements, word limits, or submission guidelines.</p>
-                        <p className="text-black text-body lg:text-body-lg"><strong>Fix:</strong> Read application instructions carefully and follow them exactly. Create a checklist for each school's requirements and double-check everything before submitting.</p>
+                        <h3 className="font-bold text-black mb-2 sm:mb-3">4. Ignoring Application Instructions</h3>
+                        <p className="text-black mb-2"><strong>Mistake:</strong> Not following specific formatting requirements, word limits, or submission guidelines.</p>
+                        <p className="text-black"><strong>Fix:</strong> Read application instructions carefully and follow them exactly. Create a checklist for each school's requirements and double-check everything before submitting.</p>
                     </div>
 
                     {/* Point 5 */}
                     <div>
-                        <h3 className="text-h3 lg:text-h3-lg font-bold text-black mb-2 sm:mb-3">5. Listing Activities Without Context</h3>
-                        <p className="text-black text-body lg:text-body-lg mb-2"><strong>Mistake:</strong> Simply listing extracurricular activities without explaining their significance or your role.</p>
-                        <p className="text-black text-body lg:text-body-lg"><strong>Fix:</strong> For each activity, explain your role, responsibilities, achievements, and what you learned. Quantify your impact when possible — mention specific accomplishments, leadership roles, or hours contributed.</p>
+                        <h3 className="font-bold text-black mb-2 sm:mb-3">5. Listing Activities Without Context</h3>
+                        <p className="text-black mb-2"><strong>Mistake:</strong> Simply listing extracurricular activities without explaining their significance or your role.</p>
+                        <p className="text-black"><strong>Fix:</strong> For each activity, explain your role, responsibilities, achievements, and what you learned. Quantify your impact when possible — mention specific accomplishments, leadership roles, or hours contributed.</p>
                     </div>
 
                     {/* Point 6 */}
                     <div>
-                        <h3 className="text-h3 lg:text-h3-lg font-bold text-black mb-2 sm:mb-3">6. Overlooking Smaller Details</h3>
-                        <p className="text-black text-body lg:text-body-lg mb-2"><strong>Mistake:</strong> Applying only to highly selective schools without a realistic mix of targets and safeties.</p>
-                        <p className="text-black text-body lg:text-body-lg"><strong>Fix:</strong> Research and apply to a balanced mix of reach, target, and safety schools. This ensures you'll have options and reduces stress during the admissions process.</p>
+                        <h3 className="font-bold text-black mb-2 sm:mb-3">6. Overlooking Smaller Details</h3>
+                        <p className="text-black mb-2"><strong>Mistake:</strong> Applying only to highly selective schools without a realistic mix of targets and safeties.</p>
+                        <p className="text-black"><strong>Fix:</strong> Research and apply to a balanced mix of reach, target, and safety schools. This ensures you'll have options and reduces stress during the admissions process.</p>
                     </div>
 
                     {/* Point 7 */}
                     <div>
-                        <h3 className="text-h3 lg:text-h3-lg font-bold text-black mb-2 sm:mb-3">7. Submitting Applications With Errors</h3>
-                        <p className="text-black text-body lg:text-body-lg mb-2"><strong>Mistake:</strong> Typos, grammatical errors, factual mistakes, or forgetting to proofread.</p>
-                        <p className="text-black text-body lg:text-body-lg"><strong>Fix:</strong> Proofread everything multiple times. Read applications aloud, use spell-check, and have others review your materials. Take breaks between writing and editing to see your work with fresh eyes.</p>
+                        <h3 className="font-bold text-black mb-2 sm:mb-3">7. Submitting Applications With Errors</h3>
+                        <p className="text-black mb-2"><strong>Mistake:</strong> Typos, grammatical errors, factual mistakes, or forgetting to proofread.</p>
+                        <p className="text-black"><strong>Fix:</strong> Proofread everything multiple times. Read applications aloud, use spell-check, and have others review your materials. Take breaks between writing and editing to see your work with fresh eyes.</p>
                     </div>
 
                     {/* Point 8 */}
                     <div>
-                        <h3 className="text-h3 lg:text-h3-lg font-bold text-black mb-2 sm:mb-3">8. Not Preparing for Interviews</h3>
-                        <p className="text-black text-body lg:text-body-lg mb-2"><strong>Mistake:</strong> Not confirming that all materials were received or missing deadlines due to incomplete applications.</p>
-                        <p className="text-black text-body lg:text-body-lg"><strong>Fix:</strong> Create a tracking system for each school's requirements and deadlines, and follow up to ensure all materials were received. Submit applications well before deadlines to account for technical issues.</p>
+                        <h3 className="font-bold text-black mb-2 sm:mb-3">8. Not Preparing for Interviews</h3>
+                        <p className="text-black mb-2"><strong>Mistake:</strong> Not confirming that all materials were received or missing deadlines due to incomplete applications.</p>
+                        <p className="text-black"><strong>Fix:</strong> Create a tracking system for each school's requirements and deadlines, and follow up to ensure all materials were received. Submit applications well before deadlines to account for technical issues.</p>
                     </div>
 
                     {/* Point 9 */}
                     <div>
-                        <h3 className="text-h3 lg:text-h3-lg font-bold text-black mb-2 sm:mb-3">9. Forgetting to Follow Up</h3>
-                        <p className="text-black text-body lg:text-body-lg mb-2"><strong>Mistake:</strong> Having parents fill out forms or write essays, showing a lack of independence.</p>
-                        <p className="text-black text-body lg:text-body-lg"><strong>Fix:</strong> While parents can provide guidance and support, students should take ownership of their applications. Admissions officers want to hear your voice, not your parents'. Both high school counselors and college admissions officers can usually tell when a parent has been overly involved in the process.</p>
+                        <h3 className="font-bold text-black mb-2 sm:mb-3">9. Forgetting to Follow Up</h3>
+                        <p className="text-black mb-2"><strong>Mistake:</strong> Having parents fill out forms or write essays, showing a lack of independence.</p>
+                        <p className="text-black"><strong>Fix:</strong> While parents can provide guidance and support, students should take ownership of their applications. Admissions officers want to hear your voice, not your parents'. Both high school counselors and college admissions officers can usually tell when a parent has been overly involved in the process.</p>
                     </div>
 
                     {/* Point 10 */}
                     <div>
-                        <h3 className="text-h3 lg:text-h3-lg font-bold text-black mb-2 sm:mb-3">10. Letting Parents Do All the Work</h3>
-                        <p className="text-black text-body lg:text-body-lg mb-2"><strong>Mistake:</strong> Waiting until the last minute to start applications, leading to rushed, lower-quality submissions.</p>
-                        <p className="text-black text-body lg:text-body-lg"><strong>Fix:</strong> Start early and create a timeline. Break down the application process into manageable tasks and set personal deadlines well before official ones. This allows time for multiple drafts, revisions, and careful review.</p>
+                        <h3 className="font-bold text-black mb-2 sm:mb-3">10. Letting Parents Do All the Work</h3>
+                        <p className="text-black mb-2"><strong>Mistake:</strong> Waiting until the last minute to start applications, leading to rushed, lower-quality submissions.</p>
+                        <p className="text-black"><strong>Fix:</strong> Start early and create a timeline. Break down the application process into manageable tasks and set personal deadlines well before official ones. This allows time for multiple drafts, revisions, and careful review.</p>
                     </div>
 
                     {/* Final Thoughts */}
                     <div className="mt-8 sm:mt-12">
-                        <h3 className="text-h3 lg:text-h3-lg font-bold text-black mb-3 sm:mb-4">Final Thoughts</h3>
-                        <p className="text-black text-body lg:text-body-lg mb-3 sm:mb-4">The college application process is more than grades and test scores — it's about telling your story with clarity and purpose. Avoiding these common mistakes can give you a serious edge and help you present the best version of yourself.</p>
-                        <p className="text-black text-body lg:text-body-lg mb-2">Need help with your essays, college list, or strategy?</p>
-                        <p className="font-semibold text-black text-body lg:text-body-lg">Book a free 15-minute consultation with one of our expert counselors</p>
+                        <h3 className="font-bold text-black mb-3 sm:mb-4">Final Thoughts</h3>
+                        <p className="text-black mb-3 sm:mb-4">The college application process is more than grades and test scores — it's about telling your story with clarity and purpose. Avoiding these common mistakes can give you a serious edge and help you present the best version of yourself.</p>
+                        <p className="text-black mb-2">Need help with your essays, college list, or strategy?</p>
+                        <p className="font-semibold text-black">Book a free 15-minute consultation with one of our expert counselors</p>
                     </div>
 
                     {/* Footer */}
-                    <div className="mt-6 sm:mt-8 text-small lg:text-small-lg text-gray-500">
+                    <div className="mt-6 sm:mt-8 text-gray-500 text-sm">
                         <p>Published on</p>
                         <p>Dated</p>
                         <p>Publish by designer</p>
@@ -248,7 +157,7 @@ const BlogPost = () => {
             {/* Related Posts Section */}
             <div className="bg-white py-12">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-h2 lg:text-h2-lg font-bold text-black mb-8 text-left">
+                    <h2 className="font-bold text-black mb-8 text-left">
                         Related Articles
                     </h2>
 
