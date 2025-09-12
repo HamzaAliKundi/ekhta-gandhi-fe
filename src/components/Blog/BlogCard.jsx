@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+//made changes
 const BlogCard = ({ id, image, title, readTime, className = "" }) => {
     return (
         <div className={`w-full max-w-[260px] sm:max-w-[360px] mx-auto shadow-md cursor-pointer ${className}`}>
