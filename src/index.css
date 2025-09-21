@@ -54,13 +54,13 @@
   font-family: 'Inter', 'Arial', sans-serif; /* Fallback for Source Sans Pro */
 }
 
-/* Global font family override - BROWN STYLE */
+/* Global font family override - ROBOTO STYLE */
 body {
-  font-family: 'Poppins', sans-serif; /* Body text uses Poppins */
+  font-family: 'Roboto', sans-serif; /* Body text uses Roboto */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto Condensed', serif; /* Roboto for all headers */
+  font-family: 'Roboto', sans-serif; /* Roboto for all headers */
 }
 
 /* Font Sample Section - Remove this after choosing */

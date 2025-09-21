@@ -89,12 +89,12 @@ const HomePageCounselors = () => {
 
                   {/* Counselor Name and Rating Stars */}
                   <div className="absolute top-3 sm:top-5 left-8 sm:left-12 right-3 sm:right-4 z-10">
-                    <h3 className="font-roboto font-bold text-black mb-0 text-[11px] sm:text-xs lg:text-sm leading-tight">
+                    <h3 className="font-bold text-black mb-0 text-[11px] sm:text-xs lg:text-sm leading-tight">
                       {counselor.name}
                     </h3>
                     
                     {/* Display rating as ★ symbols */}
-                    <div className="flex gap-0.5 mb-1 sm:mb-1.5 font-poppins">
+                    <div className="flex gap-0.5 mb-1 sm:mb-1.5">
                       {[...Array(counselor.rating)].map((_, i) => (
                         <div 
                           key={i}
@@ -108,7 +108,7 @@ const HomePageCounselors = () => {
 
                   {/* Short Description (clamped to 3 lines) */}
                   <div className="absolute top-14 sm:top-16 left-3 sm:left-4 right-3 sm:right-4 bottom-6 sm:bottom-8 z-10 overflow-hidden">
-                      <p className="font-poppins font-normal text-black 
+                      <p className="font-normal text-black 
                       text-[10px] sm:text-[11px] 
                       leading-snug tracking-[0%] line-clamp-3">
                       {counselor.description}
@@ -119,7 +119,7 @@ const HomePageCounselors = () => {
                   <div className="absolute bottom-1.5 sm:bottom-2.5 right-3 sm:right-4 z-10">
                     <a 
                       href="#"
-                      className="font-poppins font-normal text-black underline inline-flex items-center gap-1 text-[9px] sm:text-[10px] leading-[100%] tracking-[0%] hover:text-blue-600 transition-colors"
+                      className="font-normal text-black underline inline-flex items-center gap-1 text-[9px] sm:text-[10px] leading-[100%] tracking-[0%] hover:text-blue-600 transition-colors"
                     >
                       Learn more
                       {/* Small arrow icon */}

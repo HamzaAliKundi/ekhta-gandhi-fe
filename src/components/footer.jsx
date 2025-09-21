@@ -46,18 +46,18 @@ const Footer = () => {
                         {/* Logo and Description */}
                         <div className="lg:col-span-1 max-w-[180px]">
                             <div className="mb-2">
-                                <h2 className="text-lg lg:text-xl font-bold font-roboto">
+                                <h2 className="text-lg lg:text-xl font-bold">
                                     Logo
                                 </h2>   
                             </div>
-                            <p className="text-white/70 text-[13px] leading-snug font-poppins">
+                            <p className="text-white/70 text-[13px] leading-snug">
                                 This is the section where the slogan of the company will be or any other imp message
                             </p>
                         </div>
 
                         {/* Pages */}
                         <div className="max-w-[90px]">
-                            <h3 className="text-[14px] font-semibold mb-2 font-roboto uppercase">
+                            <h3 className="text-[14px] font-semibold mb-2 uppercase">
                                 Pages
                             </h3>
                             <ul className="space-y-2">
@@ -66,7 +66,7 @@ const Footer = () => {
                                         <Link
                                             to={link.href}
                                             onClick={() => window.scrollTo(0, 0)}
-                                            className="text-white/70 hover:text-white transition-colors duration-200 text-[13px] font-poppins"
+                                            className="text-white/70 hover:text-white transition-colors duration-200 text-[13px]"
                                         >
                                             {link.name}
                                         </Link>
@@ -77,7 +77,7 @@ const Footer = () => {
 
                         {/* Resources */}
                         <div className="max-w-[90px]">
-                            <h3 className="text-[14px] font-semibold mb-2 font-roboto uppercase">
+                            <h3 className="text-[14px] font-semibold mb-2 uppercase">
                                 Resources
                             </h3>
                             <ul className="space-y-2">
@@ -86,7 +86,7 @@ const Footer = () => {
                                         <Link
                                             to={link.href}
                                             onClick={() => window.scrollTo(0, 0)}
-                                            className="text-white/70 hover:text-white transition-colors duration-200 text-[13px] font-poppins"
+                                            className="text-white/70 hover:text-white transition-colors duration-200 text-[13px]"
                                         >
                                             {link.name}
                                         </Link>
@@ -97,7 +97,7 @@ const Footer = () => {
 
                         {/* Legal */}
                         <div className="max-w-[90px]">
-                            <h3 className="text-[14px] font-semibold mb-2 font-roboto uppercase">
+                            <h3 className="text-[14px] font-semibold mb-2 uppercase">
                                 Legal
                             </h3>
                             <ul className="space-y-2">
@@ -106,7 +106,7 @@ const Footer = () => {
                                         <Link
                                             to={link.href}
                                             onClick={() => window.scrollTo(0, 0)}
-                                            className="text-white/70 hover:text-white transition-colors duration-200 text-[13px] font-poppins"
+                                            className="text-white/70 hover:text-white transition-colors duration-200 text-[13px]"
                                         >
                                             {link.name}
                                         </Link>
@@ -117,17 +117,17 @@ const Footer = () => {
 
                         {/* Contact Us */}
                         <div className="w-full max-w-[160px]">
-                            <h4 className="text-[14px] font-semibold mb-3 font-roboto uppercase">
+                            <h4 className="text-[14px] font-semibold mb-3 uppercase">
                                 Contact Us
                             </h4>
-                            <div className="space-y-2 text-white/70 text-[13px] font-poppins">
+                            <div className="space-y-2 text-white/70 text-[13px]">
                                 <p>{contactInfo.address}</p>
                                 <p>{contactInfo.phone}</p>
                                 <p>{contactInfo.email}</p>
                                 <Link
                                     to="/contact"
                                     onClick={() => window.scrollTo(0, 0)}
-                                    className="text-white/70 hover:text-white transition-colors duration-200 text-[13px] font-poppins block mt-2"
+                                    className="text-white/70 hover:text-white transition-colors duration-200 text-[13px] block mt-2"
                                 >
                                     Contact Us
                                 </Link>

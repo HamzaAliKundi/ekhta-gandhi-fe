@@ -47,14 +47,14 @@ const HomePageSteps = () => {
             >
               {/* Step Badge (top left) */}
               <div className="inline-flex items-center justify-center 
-                              text-white text-xs font-poppins font-medium 
+                              text-white text-xs font-medium 
                               rounded-full mb-2 sm:mb-3 self-start 
                               bg-[#5B7C99] px-3 py-1.5 w-[70px] h-[26px]">
                 Step {step.step}
               </div>
 
               {/* Step Title */}
-              <h3 className="text-black font-poppins font-normal leading-tight 
+              <h3 className="text-black font-normal leading-tight 
                              mb-1 sm:mb-2 text-base sm:text-lg lg:text-xl">
                 {step.title}
               </h3>

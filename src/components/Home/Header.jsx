@@ -31,7 +31,7 @@ const HomePageHeader = () => {
                             </h1>
 
                             {/* Subtext paragraph under heading */}
-                            <p className="font-source-sans text-base sm:text-lg lg:text-xl leading-relaxed text-gray-700 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
+                            <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-gray-700 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
                                 Access guidance from multiple counselors.
                                 <br />
                                 Compare perspectives and move forward with confidence.
@@ -49,7 +49,7 @@ const HomePageHeader = () => {
                             </div>
                             
                             {/* Placeholder text inside search bar */}
-                            <span className="text-[#5B7C99] font-source-sans text-body lg:text-body-lg flex-1">
+                            <span className="text-[#5B7C99] text-body lg:text-body-lg flex-1">
                                 Search
                             </span>
                             

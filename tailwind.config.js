@@ -17,9 +17,9 @@ export default {
         'canela-deck': ['Georgia', 'Times New Roman', 'serif'],
         'gt-america': ['Inter', 'Arial', 'sans-serif'],
         'source-sans': ['Inter', 'Arial', 'sans-serif'],
-        // Set default fonts
-        'sans': ['Inter', 'Arial', 'sans-serif'], // Source Sans for body
-        'serif': ['Merriweather', 'Georgia', 'serif'], // Merriweather for headers
+        // Set Roboto as default fonts
+        'sans': ['Roboto', 'Arial', 'sans-serif'], // Roboto for body
+        'serif': ['Roboto', 'Arial', 'sans-serif'], // Roboto for headers too
       },
       fontSize: {
         // H1 (Hero Title) - Fluid scaling

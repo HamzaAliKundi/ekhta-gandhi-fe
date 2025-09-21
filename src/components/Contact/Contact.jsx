@@ -48,7 +48,7 @@ const Contact = () => {
                                 
                                 {/* Title */}
                                 <div className="mb-6 sm:mb-8">
-                                    <h1 className="text-h1 lg:text-h1-lg font-normal text-gray-900 font-merriweather">
+                                    <h1 className="text-h1 lg:text-h1-lg font-normal text-gray-900 ">
                                         Have a question?
                                     </h1>
                                 </div>
@@ -60,7 +60,7 @@ const Contact = () => {
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2">
                                         {/* First Name */}
                                         <div className="space-y-2">
-                                                                                         <label htmlFor="firstName" className="block text-body lg:text-body-lg font-normal text-gray-700 font-merriweather">
+                                                                                         <label htmlFor="firstName" className="block text-body lg:text-body-lg font-normal text-gray-700 ">
                                                 First name
                                             </label>
                                                                                                                                                                                    <input
@@ -70,7 +70,7 @@ const Contact = () => {
                                                   value={formData.firstName}
                                                   onChange={handleInputChange}
                                                   placeholder="Eg: jhon"
-                                                  className="w-full md:max-w-[455.5px] h-12 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all font-source-sans text-sm sm:text-base placeholder-gray-400"
+                                                  className="w-full md:max-w-[455.5px] h-12 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all  text-sm sm:text-base placeholder-gray-400"
                                                 style={{ 
                                                     paddingTop: '12px', 
                                                     paddingRight: '16px', 
@@ -83,7 +83,7 @@ const Contact = () => {
 
                                         {/* Last Name */}
                                         <div className="space-y-2">
-                                                                                         <label htmlFor="lastName" className="block text-body lg:text-body-lg font-normal text-gray-700 font-merriweather">
+                                                                                         <label htmlFor="lastName" className="block text-body lg:text-body-lg font-normal text-gray-700 ">
                                                 Last name
                                             </label>
                                                                                                                                                                                    <input
@@ -93,7 +93,7 @@ const Contact = () => {
                                                   value={formData.lastName}
                                                   onChange={handleInputChange}
                                                   placeholder="Eg: doe"
-                                                  className="w-full md:max-w-[455.5px] h-12 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all font-source-sans text-sm sm:text-base placeholder-gray-400"
+                                                  className="w-full md:max-w-[455.5px] h-12 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all  text-sm sm:text-base placeholder-gray-400"
                                                 style={{ 
                                                     paddingTop: '12px', 
                                                     paddingRight: '16px', 
@@ -107,7 +107,7 @@ const Contact = () => {
 
                                     {/* Email Field - Full Width */}
                                     <div className="space-y-2">
-                                                                                 <label htmlFor="email" className="block text-sm sm:text-base font-normal text-gray-700 font-merriweather">
+                                                                                 <label htmlFor="email" className="block text-sm sm:text-base font-normal text-gray-700 ">
                                             Email
                                         </label>
                                                                                                                                                                    <input
@@ -117,7 +117,7 @@ const Contact = () => {
                                               value={formData.email}
                                               onChange={handleInputChange}
                                               placeholder="you@company.com"
-                                              className="w-full h-12 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all font-source-sans text-sm sm:text-base placeholder-gray-400"
+                                              className="w-full h-12 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all  text-sm sm:text-base placeholder-gray-400"
                                             style={{ 
                                                 paddingTop: '12px', 
                                                 paddingRight: '16px', 
@@ -130,7 +130,7 @@ const Contact = () => {
 
                                     {/* Message Field - Full Width */}
                                     <div className="space-y-2">
-                                                                                 <label htmlFor="message" className="block text-sm sm:text-base font-normal text-gray-700 font-merriweather">
+                                                                                 <label htmlFor="message" className="block text-sm sm:text-base font-normal text-gray-700 ">
                                             Message
                                         </label>
                                                                                                                                                                    <textarea
@@ -140,7 +140,7 @@ const Contact = () => {
                                               onChange={handleInputChange}
                                               placeholder=""
                                               rows={4}
-                                              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all font-source-sans text-sm sm:text-base placeholder-gray-400 resize-none sm:rows-6"
+                                              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all  text-sm sm:text-base placeholder-gray-400 resize-none sm:rows-6"
                                             style={{ 
                                                 paddingTop: '12px', 
                                                 paddingRight: '16px', 
@@ -155,7 +155,7 @@ const Contact = () => {
                                     <div className="flex justify-start pt-4">
                                         <button
                                             type="submit"
-                                                                                         className="w-[121px] h-12 text-white hover:opacity-90 transition-colors font-source-sans text-sm sm:text-base font-normal flex items-center justify-between"
+                                                                                         className="w-[121px] h-12 text-white hover:opacity-90 transition-colors  text-sm sm:text-base font-normal flex items-center justify-between"
                                             style={{ 
                                                 backgroundColor: '#5B7C99',
                                                 borderRadius: '29px',

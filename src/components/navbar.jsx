@@ -46,37 +46,15 @@ const Navbar = () => {
 
         {/* Right: Login and Sign up buttons */}
         <div className="hidden md:flex items-center gap-[16px]">
-          {/* Login dropdown */}
-          <div className="relative group">
-            <button className="px-2 py-1 text-white hover:text-gray-200 transition-all duration-300 text-xs font-medium leading-none tracking-wide flex items-center gap-1">
-              <span>Login</span>
-              <svg className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-
-            {/* Dropdown menu */}
-            <div className="absolute top-full left-0 mt-2 w-[200px] bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-              <div className="flex flex-col divide-y divide-gray-200">
-                <a
-                  href="https://ekhta-gandhi-user.vercel.app/login"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all duration-200 font-source-sans"
-                >
-                  Login as Student
-                </a>
-                <a
-                  href="https://ekhta-gandhi-counselor.vercel.app/login"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all duration-200 font-source-sans"
-                >
-                  Login as Counselor
-                </a>
-              </div>
-            </div>
-          </div>
+          {/* Login link */}
+          <a
+            href="https://ekhta-gandhi-dashboard.vercel.app/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-2 py-1 text-white hover:text-gray-200 transition-all duration-300 text-xs font-medium leading-none tracking-wide"
+          >
+            <span>Login</span>
+          </a>
 
           {/* Sign up button */}
           <Link
